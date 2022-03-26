@@ -43,7 +43,7 @@ struct TabCell: View {
 
 struct TabCell_Previews: PreviewProvider {
     private static var onboardingEntities: [OnboardingEntity] {
-        return Mock.onboardingEntities
+        return Stub.onboardingEntities
     }
     
     static var previews: some View {

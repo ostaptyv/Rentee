@@ -14,7 +14,7 @@
 		8451EC0D27E8180A00D8A2DE /* RswiftSwiftUICompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451EC0C27E8180A00D8A2DE /* RswiftSwiftUICompatibility.swift */; };
 		8451EC1127E8196200D8A2DE /* NotoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8451EC1027E8195A00D8A2DE /* NotoSans-SemiBold.ttf */; };
 		8451EC1227E8196500D8A2DE /* PTSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8451EC0E27E8193900D8A2DE /* PTSerif-Bold.ttf */; };
-		84601BF027B8187200BC9638 /* PlaceholderImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84601BEF27B8187200BC9638 /* PlaceholderImages.xcassets */; };
+		84601BF027B8187200BC9638 /* StaticImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84601BEF27B8187200BC9638 /* StaticImages.xcassets */; };
 		84601BFB27B8458A00BC9638 /* OnboardingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84601BFA27B8458A00BC9638 /* OnboardingEntity.swift */; };
 		84601C0027B8469A00BC9638 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84601BFF27B8469A00BC9638 /* Stub.swift */; };
 		849029E72715E50C009152CA /* RenteeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849029E62715E50C009152CA /* RenteeApp.swift */; };
@@ -40,7 +40,7 @@
 		8451EC0C27E8180A00D8A2DE /* RswiftSwiftUICompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RswiftSwiftUICompatibility.swift; sourceTree = "<group>"; };
 		8451EC0E27E8193900D8A2DE /* PTSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSerif-Bold.ttf"; sourceTree = "<group>"; };
 		8451EC1027E8195A00D8A2DE /* NotoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		84601BEF27B8187200BC9638 /* PlaceholderImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PlaceholderImages.xcassets; sourceTree = "<group>"; };
+		84601BEF27B8187200BC9638 /* StaticImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StaticImages.xcassets; sourceTree = "<group>"; };
 		84601BFA27B8458A00BC9638 /* OnboardingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEntity.swift; sourceTree = "<group>"; };
 		84601BFF27B8469A00BC9638 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
 		849029E32715E50C009152CA /* Rentee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rentee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +142,7 @@
 		84601BFC27B8466800BC9638 /* Dummy */ = {
 			isa = PBXGroup;
 			children = (
-				84601BFF27B8469A00BC9638 /* Mock.swift */,
+				84601BFF27B8469A00BC9638 /* Stub.swift */,
 			);
 			path = Dummy;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				849029EA2715E50F009152CA /* AppIcon.xcassets */,
-				84601BEF27B8187200BC9638 /* PlaceholderImages.xcassets */,
+				84601BEF27B8187200BC9638 /* StaticImages.xcassets */,
 				8451EC0527E7E77A00D8A2DE /* LaunchScreen.xcassets */,
 			);
 			path = Assets;
@@ -272,10 +272,11 @@
 			buildConfigurationList = 849029F12715E50F009152CA /* Build configuration list for PBXNativeTarget "Rentee" */;
 			buildPhases = (
 				6F17D0BBA341B851AFD25DB1 /* [CP] Check Pods Manifest.lock */,
-				8451EC0727E80B7D00D8A2DE /* R.swift check */,
+				8451EC0727E80B7D00D8A2DE /* R.swift */,
 				849029DF2715E50C009152CA /* Sources */,
 				849029E02715E50C009152CA /* Frameworks */,
 				849029E12715E50C009152CA /* Resources */,
+				849E7ED327EF85FE0022875B /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -329,7 +330,7 @@
 				8451EC0627E7E77A00D8A2DE /* LaunchScreen.xcassets in Resources */,
 				8451EC1127E8196200D8A2DE /* NotoSans-SemiBold.ttf in Resources */,
 				8451EC1227E8196500D8A2DE /* PTSerif-Bold.ttf in Resources */,
-				84601BF027B8187200BC9638 /* PlaceholderImages.xcassets in Resources */,
+				84601BF027B8187200BC9638 /* StaticImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +359,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8451EC0727E80B7D00D8A2DE /* R.swift check */ = {
+		8451EC0727E80B7D00D8A2DE /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -368,7 +369,7 @@
 			);
 			inputPaths = (
 			);
-			name = "R.swift check";
+			name = R.swift;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -377,6 +378,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		849E7ED327EF85FE0022875B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -398,7 +417,7 @@
 				8439959327174F9B00BC1CCE /* Color+HexInit.swift in Sources */,
 				84E392A027EA86B700BE0436 /* ConditionalButtonStack.swift in Sources */,
 				84C1F54427E7E10900539E1A /* UpDownWave.swift in Sources */,
-				84601C0027B8469A00BC9638 /* Mock.swift in Sources */,
+				84601C0027B8469A00BC9638 /* Stub.swift in Sources */,
 				84E3929827EA845600BE0436 /* BackgroundSlide.swift in Sources */,
 				84E3929A27EA84A700BE0436 /* TabCell.swift in Sources */,
 			);

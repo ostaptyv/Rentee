@@ -11,7 +11,7 @@ struct OnboardingView: View {
     @State var selection = 0
     
     private var onboardingEntities: [OnboardingEntity] {
-        return Mock.onboardingEntities
+        return Stub.onboardingEntities
     }
     
     var body: some View {
@@ -41,7 +41,6 @@ struct OnboardingView: View {
     }
 }
 
-#if DEBUG
 struct OnboardingView_Previews: PreviewProvider {
     private static var currentPreviewDevice: String {
 //        "iPhone 12 Pro Max"
@@ -61,4 +60,3 @@ struct OnboardingView_Previews: PreviewProvider {
             .previewDisplayName(currentPreviewDevice)
     }
 }
-#endif

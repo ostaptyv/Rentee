@@ -1,5 +1,5 @@
 //
-//  Mock.swift
+//  Stub.swift
 //  Rentee
 //
 //  Created by Ostap Tyvonovych on 12.02.2022.
@@ -8,26 +8,26 @@
 import Foundation
 import UIKit
 
-struct Mock {
+struct Stub {
     static let onboardingEntities = [
         OnboardingEntity(id: UUID(),
-                         imageData: Self.imageData(imageName: "PlaceholderImageHouse1"),
+                         imageData: Self.data(imageName: "OnboardingView/House1"),
                          header: "Choose from a thousand of places",
                          description: "We provide you with a variant of accommodation for a better choice"),
         
         OnboardingEntity(id: UUID(),
-                         imageData: Self.imageData(imageName: "PlaceholderImageHouse2"),
+                         imageData: Self.data(imageName: "OnboardingView/House2"),
                          header: "Well-selected accommodation",
                          description:
                             "We provide you with a variant of accommodation for a better choice"),
         
         OnboardingEntity(id: UUID(),
-                         imageData: Self.imageData(imageName: "PlaceholderImageHouse3"),
+                         imageData: Self.data(imageName: "OnboardingView/House3"),
                          header: "Cool and secure service",
                          description: "We provide you with a variant of accommodation for a better choice")
     ]
     
-    static private func imageData(imageName: String) -> Data {
+    static private func data(imageName: String) -> Data {
         UIImage(named: imageName)!.pngData()!
     }
 }

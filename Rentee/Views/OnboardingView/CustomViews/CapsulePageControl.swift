@@ -55,4 +55,3 @@ struct CapsulePageControl: View {
         self.selectedDotColor = selectedDotColor
     }
 }
-

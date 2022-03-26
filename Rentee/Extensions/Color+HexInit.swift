@@ -10,7 +10,7 @@ import SwiftUI
 
 extension Color {
     public init?(_ colorSpace: Color.RGBColorSpace = .sRGB, hex: String, opacity: CGFloat = 1) {
-        let r, g, b: CGFloat
+        let red, green, blue: CGFloat
         var hex = hex
         
         if hex.hasPrefix("#") {
@@ -28,10 +28,10 @@ extension Color {
             return nil
         }
         
-        r = CGFloat((hexNumber & 0xff0000) >> 16) / 255
-        g = CGFloat((hexNumber & 0x00ff00) >> 8) / 255
-        b = CGFloat(hexNumber & 0x0000ff) / 255
+        red = CGFloat((hexNumber & 0xff0000) >> 16) / 255
+        green = CGFloat((hexNumber & 0x00ff00) >> 8) / 255
+        blue = CGFloat(hexNumber & 0x0000ff) / 255
         
-        self.init(colorSpace, red: r, green: g, blue: b, opacity: opacity)
+        self.init(colorSpace, red: red, green: green, blue: blue, opacity: opacity)
     }
 }
