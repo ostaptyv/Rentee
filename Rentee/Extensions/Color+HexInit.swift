@@ -35,3 +35,24 @@ extension Color {
         self.init(colorSpace, red: red, green: green, blue: blue, opacity: opacity)
     }
 }
+
+extension UIColor {
+    convenience init(light: UIColor, dark: UIColor) {
+        self.init { traitCollection in
+            switch traitCollection.userInterfaceStyle {
+            case .light, .unspecified:
+                return light
+            case .dark:
+                return dark
+            @unknown default:
+                return light
+            }
+        }
+    }
+}
+
+extension Color {
+    init(light: Color, dark: Color) {
+        self.init(UIColor(light: UIColor(light), dark: UIColor(dark)))
+    }
+}

@@ -8,7 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		8429026527E3561B00A6B53D /* ActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429026427E3561B00A6B53D /* ActionButtonStyle.swift */; };
+		842E89E327F24FF1005ABDCB /* AuthViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */; };
+		842E89E527F2501E005ABDCB /* AuthFieldSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */; };
+		842E89E727F2503C005ABDCB /* LookUpSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E627F2503C005ABDCB /* LookUpSecureField.swift */; };
+		842E89E927F250A1005ABDCB /* DataField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E827F250A1005ABDCB /* DataField.swift */; };
+		842E89EE27F2513C005ABDCB /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89ED27F2513C005ABDCB /* UIApplication+endEditing.swift */; };
+		842E89F027F25750005ABDCB /* RenteeLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89EF27F25750005ABDCB /* RenteeLogo.swift */; };
+		842E89F227F25763005ABDCB /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89F127F25763005ABDCB /* SignUpForm.swift */; };
+		842E89F427F25820005ABDCB /* SignInProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89F327F25820005ABDCB /* SignInProposal.swift */; };
+		842E89F627F34782005ABDCB /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89F527F34782005ABDCB /* Header.swift */; };
+		842E89F927F35A0C005ABDCB /* ErrorMessageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89F827F35A0C005ABDCB /* ErrorMessageModifier.swift */; };
 		8439959327174F9B00BC1CCE /* Color+HexInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439959227174F9B00BC1CCE /* Color+HexInit.swift */; };
+		844F41A027F1DB7900EF663F /* RenteeTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F419F27F1DB7800EF663F /* RenteeTextFieldStyle.swift */; };
 		8451EC0627E7E77A00D8A2DE /* LaunchScreen.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8451EC0527E7E77A00D8A2DE /* LaunchScreen.xcassets */; };
 		8451EC0927E80C1300D8A2DE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451EC0827E80C1200D8A2DE /* R.generated.swift */; };
 		8451EC0D27E8180A00D8A2DE /* RswiftSwiftUICompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451EC0C27E8180A00D8A2DE /* RswiftSwiftUICompatibility.swift */; };
@@ -22,6 +33,8 @@
 		849029EB2715E50F009152CA /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849029EA2715E50F009152CA /* AppIcon.xcassets */; };
 		84C1F54427E7E10900539E1A /* UpDownWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1F54327E7E10900539E1A /* UpDownWave.swift */; };
 		84C1F54827E7E2FD00539E1A /* CapsulePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1F54727E7E2FD00539E1A /* CapsulePageControl.swift */; };
+		84CC08AD27F0906700BD05BA /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC08AC27F0906700BD05BA /* AuthorizationView.swift */; };
+		84CC08AF27F0A50B00BD05BA /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC08AE27F0A50B00BD05BA /* NotoSans-Bold.ttf */; };
 		84CC08B127F0D3C500BD05BA /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC08B027F0D3C500BD05BA /* NotoSans-Regular.ttf */; };
 		84E3929827EA845600BE0436 /* BackgroundSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3929727EA845500BE0436 /* BackgroundSlide.swift */; };
 		84E3929A27EA84A700BE0436 /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3929927EA84A700BE0436 /* TabCell.swift */; };
@@ -34,8 +47,19 @@
 
 /* Begin PBXFileReference section */
 		8429026427E3561B00A6B53D /* ActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyle.swift; sourceTree = "<group>"; };
+		842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewBackground.swift; sourceTree = "<group>"; };
+		842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFieldSheet.swift; sourceTree = "<group>"; };
+		842E89E627F2503C005ABDCB /* LookUpSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookUpSecureField.swift; sourceTree = "<group>"; };
+		842E89E827F250A1005ABDCB /* DataField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataField.swift; sourceTree = "<group>"; };
+		842E89ED27F2513C005ABDCB /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
+		842E89EF27F25750005ABDCB /* RenteeLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenteeLogo.swift; sourceTree = "<group>"; };
+		842E89F127F25763005ABDCB /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
+		842E89F327F25820005ABDCB /* SignInProposal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProposal.swift; sourceTree = "<group>"; };
+		842E89F527F34782005ABDCB /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		842E89F827F35A0C005ABDCB /* ErrorMessageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageModifier.swift; sourceTree = "<group>"; };
 		8439959027174DE100BC1CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8439959227174F9B00BC1CCE /* Color+HexInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+HexInit.swift"; sourceTree = "<group>"; };
+		844F419F27F1DB7800EF663F /* RenteeTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenteeTextFieldStyle.swift; sourceTree = "<group>"; };
 		8451EC0527E7E77A00D8A2DE /* LaunchScreen.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchScreen.xcassets; sourceTree = "<group>"; };
 		8451EC0827E80C1200D8A2DE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8451EC0C27E8180A00D8A2DE /* RswiftSwiftUICompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RswiftSwiftUICompatibility.swift; sourceTree = "<group>"; };
@@ -50,6 +74,8 @@
 		849029EA2715E50F009152CA /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		84C1F54327E7E10900539E1A /* UpDownWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpDownWave.swift; sourceTree = "<group>"; };
 		84C1F54727E7E2FD00539E1A /* CapsulePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsulePageControl.swift; sourceTree = "<group>"; };
+		84CC08AC27F0906700BD05BA /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		84CC08AE27F0A50B00BD05BA /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		84CC08B027F0D3C500BD05BA /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		84E3929727EA845500BE0436 /* BackgroundSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSlide.swift; sourceTree = "<group>"; };
 		84E3929927EA84A700BE0436 /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
@@ -95,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				8429026427E3561B00A6B53D /* ActionButtonStyle.swift */,
+				844F419F27F1DB7800EF663F /* RenteeTextFieldStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -103,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				8439959227174F9B00BC1CCE /* Color+HexInit.swift */,
+				842E89ED27F2513C005ABDCB /* UIApplication+endEditing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,6 +140,7 @@
 			children = (
 				84CC08B027F0D3C500BD05BA /* NotoSans-Regular.ttf */,
 				8451EC1027E8195A00D8A2DE /* NotoSans-SemiBold.ttf */,
+				84CC08AE27F0A50B00BD05BA /* NotoSans-Bold.ttf */,
 			);
 			path = NotoSans;
 			sourceTree = "<group>";
@@ -153,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				846E074927F2102500BC06A7 /* StatusBarStyleModifier.swift */,
+				842E89F827F35A0C005ABDCB /* ErrorMessageModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -204,11 +234,27 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		84CC08A927F0904F00BD05BA /* AuthorizationView */ = {
+			isa = PBXGroup;
+			children = (
+				84CC08AC27F0906700BD05BA /* AuthorizationView.swift */,
+				842E89F127F25763005ABDCB /* SignUpForm.swift */,
+				842E89F327F25820005ABDCB /* SignInProposal.swift */,
+				842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */,
+				842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */,
+				842E89EF27F25750005ABDCB /* RenteeLogo.swift */,
+				842E89E827F250A1005ABDCB /* DataField.swift */,
+				842E89E627F2503C005ABDCB /* LookUpSecureField.swift */,
+			);
+			path = AuthorizationView;
+			sourceTree = "<group>";
+		};
 		84E3929427EA83FE00BE0436 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				846E074827F20FF900BC06A7 /* Modifiers */,
 				8429024927E2064800A6B53D /* Styles */,
+				842E89F527F34782005ABDCB /* Header.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -241,6 +287,7 @@
 			children = (
 				84E3929427EA83FE00BE0436 /* Shared */,
 				84E3929527EA841E00BE0436 /* OnboardingView */,
+				84CC08A927F0904F00BD05BA /* AuthorizationView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -337,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CC08B127F0D3C500BD05BA /* NotoSans-Regular.ttf in Resources */,
+				84CC08AF27F0A50B00BD05BA /* NotoSans-Bold.ttf in Resources */,
 				849029EB2715E50F009152CA /* AppIcon.xcassets in Resources */,
 				8451EC0627E7E77A00D8A2DE /* LaunchScreen.xcassets in Resources */,
 				8451EC1127E8196200D8A2DE /* NotoSans-SemiBold.ttf in Resources */,
@@ -415,21 +463,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842E89E327F24FF1005ABDCB /* AuthViewBackground.swift in Sources */,
 				846E074A27F2102500BC06A7 /* StatusBarStyleModifier.swift in Sources */,
 				84E3929E27EA863500BE0436 /* NavigationButtonStack.swift in Sources */,
 				84E3929C27EA84CC00BE0436 /* AuthButtonStack.swift in Sources */,
 				849029E72715E50C009152CA /* RenteeApp.swift in Sources */,
+				842E89F427F25820005ABDCB /* SignInProposal.swift in Sources */,
 				84C1F54827E7E2FD00539E1A /* CapsulePageControl.swift in Sources */,
+				842E89E727F2503C005ABDCB /* LookUpSecureField.swift in Sources */,
 				8451EC0927E80C1300D8A2DE /* R.generated.swift in Sources */,
 				84F363592715EA9100127899 /* OnboardingView.swift in Sources */,
+				842E89F627F34782005ABDCB /* Header.swift in Sources */,
 				8451EC0D27E8180A00D8A2DE /* RswiftSwiftUICompatibility.swift in Sources */,
+				842E89F227F25763005ABDCB /* SignUpForm.swift in Sources */,
 				84601BFB27B8458A00BC9638 /* OnboardingEntity.swift in Sources */,
+				842E89E527F2501E005ABDCB /* AuthFieldSheet.swift in Sources */,
 				8429026527E3561B00A6B53D /* ActionButtonStyle.swift in Sources */,
+				842E89EE27F2513C005ABDCB /* UIApplication+endEditing.swift in Sources */,
 				8439959327174F9B00BC1CCE /* Color+HexInit.swift in Sources */,
+				842E89F027F25750005ABDCB /* RenteeLogo.swift in Sources */,
+				842E89F927F35A0C005ABDCB /* ErrorMessageModifier.swift in Sources */,
+				842E89E927F250A1005ABDCB /* DataField.swift in Sources */,
+				844F41A027F1DB7900EF663F /* RenteeTextFieldStyle.swift in Sources */,
 				84E392A027EA86B700BE0436 /* ConditionalButtonStack.swift in Sources */,
 				84C1F54427E7E10900539E1A /* UpDownWave.swift in Sources */,
 				84601C0027B8469A00BC9638 /* Stub.swift in Sources */,
 				84E3929827EA845600BE0436 /* BackgroundSlide.swift in Sources */,
+				84CC08AD27F0906700BD05BA /* AuthorizationView.swift in Sources */,
 				84E3929A27EA84A700BE0436 /* TabCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
