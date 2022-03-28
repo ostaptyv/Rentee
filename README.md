@@ -61,7 +61,7 @@ UI supports all screens with the @2x and higher scale factors. The only device @
 
 God helps you :)  
 But jokes aside, if you're experiencing any problems with the project, file a respective [issue](https://github.com/ostaptyv/Rentee/issues/new/choose).  
-Also, if you have a suggestion on how to fix some known issue (the list is given below) you can create a [pull request](https://github.com/ostaptyv/Rentee/compare), or send me some articles, materials, code snippets, etc. which may be useful (see my contacts in [Authors](#authors) section).
+Also, if you have a suggestion on how to fix some known issue (the list is given below) you can create a [pull request](https://github.com/ostaptyv/Rentee/pulls), or send me some articles, materials, code snippets, etc. which may be useful (see my contacts in [Authors](#authors) section).
 
 ### Known issues
 
