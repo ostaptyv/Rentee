@@ -38,6 +38,7 @@ struct OnboardingView: View {
             Spacer(minLength: 46)
         }
         .edgesIgnoringSafeArea([.top, .bottom])
+        .statusBarStyle(.dark)
     }
 }
 
