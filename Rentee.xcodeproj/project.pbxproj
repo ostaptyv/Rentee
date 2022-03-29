@@ -91,12 +91,12 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		8429024927E2064800A6B53D /* ButtonStyles */ = {
+		8429024927E2064800A6B53D /* Styles */ = {
 			isa = PBXGroup;
 			children = (
 				8429026427E3561B00A6B53D /* ActionButtonStyle.swift */,
 			);
-			path = ButtonStyles;
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		8439959127174F8D00BC1CCE /* Extensions */ = {
@@ -208,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				846E074827F20FF900BC06A7 /* Modifiers */,
-				8429024927E2064800A6B53D /* ButtonStyles */,
+				8429024927E2064800A6B53D /* Styles */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -217,8 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				84E3929627EA844200BE0436 /* Transitions */,
-				84C1F54527E7E2DD00539E1A /* CustomViews */,
 				84C1F54227E7E0F000539E1A /* Shapes */,
+				84C1F54527E7E2DD00539E1A /* CustomViews */,
 				84F363582715EA9100127899 /* OnboardingView.swift */,
 				84E3929927EA84A700BE0436 /* TabCell.swift */,
 				84E3929F27EA86B700BE0436 /* ConditionalButtonStack.swift */,
