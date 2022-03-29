@@ -5,9 +5,9 @@
 //  Created by Ostap Tyvonovych on 28.03.2022.
 //
 
-import UIKit
 import SwiftUI
 
+#if canImport(UIKit)
 struct StatusBarStyleModifier: ViewModifier {
     let style: ColorScheme
     
@@ -38,3 +38,4 @@ extension View {
         self.modifier(StatusBarStyleModifier(style: style))
     }
 }
+#endif

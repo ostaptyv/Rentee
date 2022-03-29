@@ -5,7 +5,6 @@
 //  Created by Ostap Tyvonovych on 12.02.2022.
 //
 
-import Foundation
 import UIKit
 
 struct Stub {
