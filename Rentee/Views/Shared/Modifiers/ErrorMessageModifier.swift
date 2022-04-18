@@ -31,6 +31,7 @@ struct ErrorMessageModifier: ViewModifier {
 }
 
 extension View {
+    // TODO: TODO: Remove the string with nil; for debug purposes
     func errorMessage(_ message: String? = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices nec erat ut dictum. Mauris non urna ac leo eleifend commodo ac eu neque."
     ) -> some View {
         modifier(ErrorMessageModifier(message: message))
