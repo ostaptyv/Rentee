@@ -14,13 +14,10 @@ struct SignInProposal: View {
                 .font(R.font.notoSansRegular.font(size: 12))
                 .foregroundColor(Color(hex: "7583A0"))
             
-            Button {
+            Button("Sign in") {
                 print("Sign In button tapped")
-            } label: {
-                Text("Sign in")
-                    .font(R.font.notoSansBold.font(size: 12))
-                    .foregroundColor(Color(hex: "3545B1"))
             }
+            .buttonStyle(.textButton)
         }
     }
 }
