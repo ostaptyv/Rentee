@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpForm: View {
-    enum FieldType {
+    private enum FieldType {
         case fullName
         case phoneNumber
         case password
