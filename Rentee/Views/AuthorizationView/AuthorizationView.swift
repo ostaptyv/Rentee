@@ -10,30 +10,47 @@ import SwiftUI
 struct AuthorizationView: View {
     @State var fullName = ""
     @State var phoneNumber = ""
+    @State var countryEmoji: Character = "🇺🇦"
     @State var password = ""
     @State var confirmedPassword = ""
+    
+    @State var mfaCode = "1234"
+    
+    @State var isVerification = false
+    @State var currentPictogram: PictogramType = .renteeLogo
     
     let buttonSize = CGSize(width: 184, height: 50)
     
     var body: some View {
         AuthViewBackground {
-            VStack {
-                Spacer(minLength: 30)
-                RenteeLogo()
+            VStack(spacing: 0) {
+                Pictogram(type: $currentPictogram)
                 
-                Spacer(minLength: 30)
                 AuthFieldSheet {
-                    SignUpForm(fullName: $fullName,
-                               phoneNumber: $phoneNumber,
-                               password: $password,
-                               confirmedPassword: $confirmedPassword,
-                               buttonSize: buttonSize)
-                    
-                    Spacer()
-                        .frame(maxHeight: 15)
-                    
-                    SignInProposal()
+                    if !isVerification {
+                        SignUpForm(fullName: $fullName,
+                                   phoneNumber: $phoneNumber,
+                                   countryEmoji: $countryEmoji,
+                                   password: $password,
+                                   confirmedPassword: $confirmedPassword)
+                        .onSignUp {
+                            withAnimation {
+                                isVerification = true
+                                currentPictogram = .verify
+                            }
+                        }
+                    } else {
+                        MFACodeForm(mfaCode: $mfaCode,
+                                    resendCodeTime: "Resend in 12s")
+                        .onResend {
+                            withAnimation {
+                                isVerification = false
+                                currentPictogram = .renteeLogo
+                            }
+                        }
+                    }
                 }
+                .buttonStyle(.mainAction(size: buttonSize))
                 
                 Spacer(minLength: 61)
             }

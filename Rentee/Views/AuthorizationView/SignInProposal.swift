@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignInProposal: View {
+    private var onSignInClosure: (() -> Void)?
+    
     var body: some View {
         HStack(spacing: 0) {
             Text("Already have an account? ")
@@ -15,10 +17,19 @@ struct SignInProposal: View {
                 .foregroundColor(Color(hex: "7583A0"))
             
             Button("Sign in") {
-                print("Sign In button tapped")
+                onSignInClosure?()
             }
             .buttonStyle(.textButton)
         }
+    }
+    
+    // MARK: - Modifiers
+    
+    func onSignIn(_ closure: @escaping () -> Void) -> SignInProposal {
+        var view = self
+        view.onSignInClosure = closure
+        
+        return view
     }
 }
 

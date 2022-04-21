@@ -22,6 +22,7 @@ struct AuthFieldSheet<Content: View>: View {
             .padding(24)
         }
         .padding([.leading, .trailing], 32)
+        .clipped()
     }
     
     init(@ViewBuilder content: @escaping () -> Content) {

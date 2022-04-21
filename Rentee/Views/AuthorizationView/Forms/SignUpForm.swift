@@ -18,10 +18,12 @@ struct SignUpForm: View {
     
     @Binding var fullName: String
     @Binding var phoneNumber: String
+    @Binding var countryEmoji: Character
     @Binding var password: String
     @Binding var confirmedPassword: String
     
-    let buttonSize: CGSize
+    private var onSignUpClosure: (() -> Void)?
+    private var onSignInClosure: (() -> Void)?
     
     var body: some View {
         VStack(spacing: 20) {
@@ -34,7 +36,7 @@ struct SignUpForm: View {
                 .focused($focusedField, equals: .fullName)
                 .submitLabel(.next)
             
-            DataField(text: $phoneNumber, kind: .phoneNumber(country: .constant("🇺🇦")))
+            DataField(text: $phoneNumber, kind: .phoneNumber(country: $countryEmoji))
                 .title("Phone number")
                 .prompt("Your phone number here")
                 .errorMessage()
@@ -62,9 +64,8 @@ struct SignUpForm: View {
                 .submitLabel(.done)
             
             Button("Sign Up") {
-                print("Sign Up button tapped")
+                onSignUpClosure?()
             }
-            .buttonStyle(.mainAction(size: buttonSize))
         }
         .onSubmit {
             switch focusedField! {
@@ -78,15 +79,56 @@ struct SignUpForm: View {
                 focusedField = nil
             }
         }
+        
+        Spacer()
+            .frame(maxHeight: 15)
+        
+        SignInProposal()
+            .onSignIn {
+                onSignInClosure?()
+            }
+    }
+    
+    // MARK: - Modifiers
+    
+    func onSignUp(_ closure: @escaping () -> Void) -> SignUpForm {
+        var view = self
+        view.onSignUpClosure = closure
+        
+        return view
+    }
+    func onSignIn(_ closure: @escaping () -> Void) -> SignUpForm {
+        var view = self
+        view.onSignInClosure = closure
+        
+        return view
+    }
+    
+    // MARK: - Initializers
+    
+    init(fullName: Binding<String>,
+         phoneNumber: Binding<String>,
+         countryEmoji: Binding<Character>,
+         password: Binding<String>,
+         confirmedPassword: Binding<String>) {
+        
+        self._fullName = fullName
+        self._phoneNumber = phoneNumber
+        self._countryEmoji = countryEmoji
+        self._password = password
+        self._confirmedPassword = confirmedPassword
     }
 }
 
 struct SignUpForm_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpForm(fullName: .constant(""),
-                   phoneNumber: .constant(""),
-                   password: .constant(""),
-                   confirmedPassword: .constant(""),
-                   buttonSize: CGSize(width: 184, height: 50))
+        VStack(spacing: 0) {
+            SignUpForm(fullName: .constant(""),
+                       phoneNumber: .constant(""),
+                       countryEmoji: .constant("🇺🇦"),
+                       password: .constant(""),
+                       confirmedPassword: .constant(""))
+            .buttonStyle(.mainAction(size: CGSize(width: 184, height: 50)))
+        }
     }
 }

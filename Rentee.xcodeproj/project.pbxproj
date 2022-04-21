@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8429026527E3561B00A6B53D /* ActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429026427E3561B00A6B53D /* ActionButtonStyle.swift */; };
+		842A8F4F28106A19008B358E /* String+localizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F4E28106A19008B358E /* String+localizedError.swift */; };
+		842A8F512810765D008B358E /* RNTCodeMFAFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F502810765D008B358E /* RNTCodeMFAFieldDelegate.swift */; };
+		842A8F5628118D30008B358E /* Pictogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F5528118D30008B358E /* Pictogram.swift */; };
 		842E89E327F24FF1005ABDCB /* AuthViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */; };
 		842E89E527F2501E005ABDCB /* AuthFieldSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */; };
 		842E89E727F2503C005ABDCB /* SecureLookUpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E627F2503C005ABDCB /* SecureLookUpField.swift */; };
@@ -29,7 +32,10 @@
 		84601BFB27B8458A00BC9638 /* OnboardingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84601BFA27B8458A00BC9638 /* OnboardingEntity.swift */; };
 		84601C0027B8469A00BC9638 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84601BFF27B8469A00BC9638 /* Stub.swift */; };
 		846E074A27F2102500BC06A7 /* StatusBarStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E074927F2102500BC06A7 /* StatusBarStyleModifier.swift */; };
+		84898DFF280E013F00187A9E /* MFACodeForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84898DFE280E013F00187A9E /* MFACodeForm.swift */; };
 		84898E01280E067700187A9E /* TextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84898E00280E067700187A9E /* TextButtonStyle.swift */; };
+		84898E03280E188900187A9E /* ShieldPictogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84898E02280E188800187A9E /* ShieldPictogram.swift */; };
+		84898E05280E1D4B00187A9E /* MFACodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84898E04280E1D4B00187A9E /* MFACodeField.swift */; };
 		849029E72715E50C009152CA /* RenteeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849029E62715E50C009152CA /* RenteeApp.swift */; };
 		849029EB2715E50F009152CA /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849029EA2715E50F009152CA /* AppIcon.xcassets */; };
 		84988A80280B6A7D00E902E6 /* PhoneNumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84988A7F280B6A7D00E902E6 /* PhoneNumberField.swift */; };
@@ -47,11 +53,15 @@
 		84E3929E27EA863500BE0436 /* NavigationButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3929D27EA863500BE0436 /* NavigationButtonStack.swift */; };
 		84E392A027EA86B700BE0436 /* ConditionalButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3929F27EA86B700BE0436 /* ConditionalButtonStack.swift */; };
 		84F363592715EA9100127899 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F363582715EA9100127899 /* OnboardingView.swift */; };
+		84FB9B6F280F2BD900B95697 /* RNTCodeMFAField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB9B6E280F2BD900B95697 /* RNTCodeMFAField.swift */; };
 		98EDB9BA47ACF80E1801042E /* libPods-Rentee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC47F1520FBB0875C562F76 /* libPods-Rentee.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8429026427E3561B00A6B53D /* ActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyle.swift; sourceTree = "<group>"; };
+		842A8F4E28106A19008B358E /* String+localizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localizedError.swift"; sourceTree = "<group>"; };
+		842A8F502810765D008B358E /* RNTCodeMFAFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNTCodeMFAFieldDelegate.swift; sourceTree = "<group>"; };
+		842A8F5528118D30008B358E /* Pictogram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pictogram.swift; sourceTree = "<group>"; };
 		842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewBackground.swift; sourceTree = "<group>"; };
 		842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFieldSheet.swift; sourceTree = "<group>"; };
 		842E89E627F2503C005ABDCB /* SecureLookUpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLookUpField.swift; sourceTree = "<group>"; };
@@ -74,7 +84,10 @@
 		84601BFA27B8458A00BC9638 /* OnboardingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEntity.swift; sourceTree = "<group>"; };
 		84601BFF27B8469A00BC9638 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
 		846E074927F2102500BC06A7 /* StatusBarStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleModifier.swift; sourceTree = "<group>"; };
+		84898DFE280E013F00187A9E /* MFACodeForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFACodeForm.swift; sourceTree = "<group>"; };
 		84898E00280E067700187A9E /* TextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonStyle.swift; sourceTree = "<group>"; };
+		84898E02280E188800187A9E /* ShieldPictogram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldPictogram.swift; sourceTree = "<group>"; };
+		84898E04280E1D4B00187A9E /* MFACodeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFACodeField.swift; sourceTree = "<group>"; };
 		849029E32715E50C009152CA /* Rentee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rentee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849029E62715E50C009152CA /* RenteeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenteeApp.swift; sourceTree = "<group>"; };
 		849029EA2715E50F009152CA /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
@@ -93,6 +106,7 @@
 		84E3929D27EA863500BE0436 /* NavigationButtonStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonStack.swift; sourceTree = "<group>"; };
 		84E3929F27EA86B700BE0436 /* ConditionalButtonStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalButtonStack.swift; sourceTree = "<group>"; };
 		84F363582715EA9100127899 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		84FB9B6E280F2BD900B95697 /* RNTCodeMFAField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNTCodeMFAField.swift; sourceTree = "<group>"; };
 		8D216C28A8265FB860EE7656 /* Pods-Rentee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rentee.release.xcconfig"; path = "Target Support Files/Pods-Rentee/Pods-Rentee.release.xcconfig"; sourceTree = "<group>"; };
 		A9904154E27491F5A8999385 /* Pods-Rentee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rentee.debug.xcconfig"; path = "Target Support Files/Pods-Rentee/Pods-Rentee.debug.xcconfig"; sourceTree = "<group>"; };
 		ECC47F1520FBB0875C562F76 /* libPods-Rentee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rentee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,11 +151,49 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		842A8F52281185DB008B358E /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				842E89F127F25763005ABDCB /* SignUpForm.swift */,
+				84898DFE280E013F00187A9E /* MFACodeForm.swift */,
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
+		842A8F532811860A008B358E /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				842A8F5428118615008B358E /* UIKitBacked */,
+				84898E04280E1D4B00187A9E /* MFACodeField.swift */,
+			);
+			path = Fields;
+			sourceTree = "<group>";
+		};
+		842A8F5428118615008B358E /* UIKitBacked */ = {
+			isa = PBXGroup;
+			children = (
+				84FB9B6E280F2BD900B95697 /* RNTCodeMFAField.swift */,
+				842A8F502810765D008B358E /* RNTCodeMFAFieldDelegate.swift */,
+			);
+			path = UIKitBacked;
+			sourceTree = "<group>";
+		};
+		842A8F5728118DA6008B358E /* Pictograms */ = {
+			isa = PBXGroup;
+			children = (
+				842A8F5528118D30008B358E /* Pictogram.swift */,
+				842E89EF27F25750005ABDCB /* RenteeLogo.swift */,
+				84898E02280E188800187A9E /* ShieldPictogram.swift */,
+			);
+			path = Pictograms;
+			sourceTree = "<group>";
+		};
 		8439959127174F8D00BC1CCE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				8439959227174F9B00BC1CCE /* Color+HexInit.swift */,
 				842E89ED27F2513C005ABDCB /* UIApplication+endEditing.swift */,
+				842A8F4E28106A19008B358E /* String+localizedError.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -265,12 +317,13 @@
 		84CC08A927F0904F00BD05BA /* AuthorizationView */ = {
 			isa = PBXGroup;
 			children = (
+				842A8F532811860A008B358E /* Fields */,
+				842A8F5728118DA6008B358E /* Pictograms */,
+				842A8F52281185DB008B358E /* Forms */,
 				84CC08AC27F0906700BD05BA /* AuthorizationView.swift */,
-				842E89F127F25763005ABDCB /* SignUpForm.swift */,
 				842E89F327F25820005ABDCB /* SignInProposal.swift */,
 				842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */,
 				842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */,
-				842E89EF27F25750005ABDCB /* RenteeLogo.swift */,
 			);
 			path = AuthorizationView;
 			sourceTree = "<group>";
@@ -495,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842E89E327F24FF1005ABDCB /* AuthViewBackground.swift in Sources */,
+				84898DFF280E013F00187A9E /* MFACodeForm.swift in Sources */,
 				846E074A27F2102500BC06A7 /* StatusBarStyleModifier.swift in Sources */,
 				84E3929E27EA863500BE0436 /* NavigationButtonStack.swift in Sources */,
 				84E3929C27EA84CC00BE0436 /* AuthButtonStack.swift in Sources */,
@@ -510,12 +564,17 @@
 				842E89F227F25763005ABDCB /* SignUpForm.swift in Sources */,
 				84601BFB27B8458A00BC9638 /* OnboardingEntity.swift in Sources */,
 				842E89E527F2501E005ABDCB /* AuthFieldSheet.swift in Sources */,
+				84FB9B6F280F2BD900B95697 /* RNTCodeMFAField.swift in Sources */,
+				84898E03280E188900187A9E /* ShieldPictogram.swift in Sources */,
 				8429026527E3561B00A6B53D /* ActionButtonStyle.swift in Sources */,
 				84988A88280C2B9000E902E6 /* Corner.swift in Sources */,
+				842A8F4F28106A19008B358E /* String+localizedError.swift in Sources */,
 				842E89EE27F2513C005ABDCB /* UIApplication+endEditing.swift in Sources */,
 				8439959327174F9B00BC1CCE /* Color+HexInit.swift in Sources */,
+				842A8F5628118D30008B358E /* Pictogram.swift in Sources */,
 				842E89F027F25750005ABDCB /* RenteeLogo.swift in Sources */,
 				842E89F927F35A0C005ABDCB /* ErrorMessageModifier.swift in Sources */,
+				84898E05280E1D4B00187A9E /* MFACodeField.swift in Sources */,
 				842E89E927F250A1005ABDCB /* DataField.swift in Sources */,
 				844F41A027F1DB7900EF663F /* RenteeTextFieldStyle.swift in Sources */,
 				84E392A027EA86B700BE0436 /* ConditionalButtonStack.swift in Sources */,
@@ -523,6 +582,7 @@
 				84988A85280B6B1300E902E6 /* CornerRadiusMaskModifier.swift in Sources */,
 				84C1F54427E7E10900539E1A /* UpDownWave.swift in Sources */,
 				84601C0027B8469A00BC9638 /* Stub.swift in Sources */,
+				842A8F512810765D008B358E /* RNTCodeMFAFieldDelegate.swift in Sources */,
 				84988A80280B6A7D00E902E6 /* PhoneNumberField.swift in Sources */,
 				84E3929827EA845600BE0436 /* BackgroundSlide.swift in Sources */,
 				84CC08AD27F0906700BD05BA /* AuthorizationView.swift in Sources */,
