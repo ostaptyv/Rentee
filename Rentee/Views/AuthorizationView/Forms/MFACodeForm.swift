@@ -15,35 +15,30 @@ struct MFACodeForm: View {
     private var onResendClosure: (() -> Void)?
     
     var body: some View {
-        Spacer(minLength: 8)
-        Text("Please enter the verification code sent to your phone number")
-            .font(R.font.notoSansRegular.font(size: 14))
-            .foregroundColor(Color(hex: "7583A0")!)
-            .multilineTextAlignment(.center)
-        
-        Spacer(minLength: 24)
-        Header("Your code here") {
-            MFACodeField(text: $mfaCode)
-                .onCodeFilled {
-                    onCodeFilledClosure?()
-                }
-                .textContentType(.oneTimeCode)
-                .frame(height: 55)
-                .errorMessage()
-        }
-        
-        Spacer(minLength: 15)
-        HStack {
-            Text(resendCodeTime)
-                .font(R.font.notoSansRegular.font(size: 12))
-                .foregroundColor(Color(hex: "7583A0")!)
-            
-            Spacer()
-            
-            Button("Resend") {
-                onResendClosure?()
+        OperationDescription("Please enter the verification code sent to your phone number") {
+            Header("Your code here") {
+                MFACodeField(text: $mfaCode)
+                    .onCodeFilled {
+                        onCodeFilledClosure?()
+                    }
+                    .textContentType(.oneTimeCode)
+                    .frame(height: 55)
+                    .errorMessage()
             }
-            .buttonStyle(.textButton)
+            
+            Spacer(minLength: 15)
+            HStack {
+                Text(resendCodeTime)
+                    .font(R.font.notoSansRegular.font(size: 12))
+                    .foregroundColor(Color(hex: "7583A0")!)
+                
+                Spacer()
+                
+                Button("Resend") {
+                    onResendClosure?()
+                }
+                .buttonStyle(.textButton)
+            }
         }
     }
     

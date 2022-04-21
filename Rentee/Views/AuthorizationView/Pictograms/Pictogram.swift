@@ -10,6 +10,7 @@ import SwiftUI
 enum PictogramType {
     case renteeLogo
     case verify
+    case resetPassword
 }
 
 struct Pictogram: View {
@@ -26,6 +27,8 @@ struct Pictogram: View {
                 RenteeLogo()
             case .verify:
                 ShieldPictogram(description: "Verify")
+            case .resetPassword:
+                ShieldPictogram(description: "Reset your password")
             }
         }
     }
