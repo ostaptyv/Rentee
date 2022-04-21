@@ -11,6 +11,8 @@
 		842A8F4F28106A19008B358E /* String+localizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F4E28106A19008B358E /* String+localizedError.swift */; };
 		842A8F512810765D008B358E /* RNTCodeMFAFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F502810765D008B358E /* RNTCodeMFAFieldDelegate.swift */; };
 		842A8F5628118D30008B358E /* Pictogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F5528118D30008B358E /* Pictogram.swift */; };
+		842A8F592811D453008B358E /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F582811D453008B358E /* SignInForm.swift */; };
+		842A8F5B2811D4C3008B358E /* SignUpProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F5A2811D4C3008B358E /* SignUpProposal.swift */; };
 		842E89E327F24FF1005ABDCB /* AuthViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */; };
 		842E89E527F2501E005ABDCB /* AuthFieldSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */; };
 		842E89E727F2503C005ABDCB /* SecureLookUpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E627F2503C005ABDCB /* SecureLookUpField.swift */; };
@@ -62,6 +64,8 @@
 		842A8F4E28106A19008B358E /* String+localizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localizedError.swift"; sourceTree = "<group>"; };
 		842A8F502810765D008B358E /* RNTCodeMFAFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNTCodeMFAFieldDelegate.swift; sourceTree = "<group>"; };
 		842A8F5528118D30008B358E /* Pictogram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pictogram.swift; sourceTree = "<group>"; };
+		842A8F582811D453008B358E /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
+		842A8F5A2811D4C3008B358E /* SignUpProposal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProposal.swift; sourceTree = "<group>"; };
 		842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewBackground.swift; sourceTree = "<group>"; };
 		842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFieldSheet.swift; sourceTree = "<group>"; };
 		842E89E627F2503C005ABDCB /* SecureLookUpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLookUpField.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				842E89F127F25763005ABDCB /* SignUpForm.swift */,
+				842A8F582811D453008B358E /* SignInForm.swift */,
 				84898DFE280E013F00187A9E /* MFACodeForm.swift */,
 			);
 			path = Forms;
@@ -322,6 +327,7 @@
 				842A8F52281185DB008B358E /* Forms */,
 				84CC08AC27F0906700BD05BA /* AuthorizationView.swift */,
 				842E89F327F25820005ABDCB /* SignInProposal.swift */,
+				842A8F5A2811D4C3008B358E /* SignUpProposal.swift */,
 				842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */,
 				842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */,
 			);
@@ -560,6 +566,7 @@
 				8451EC0927E80C1300D8A2DE /* R.generated.swift in Sources */,
 				84F363592715EA9100127899 /* OnboardingView.swift in Sources */,
 				842E89F627F34782005ABDCB /* Header.swift in Sources */,
+				842A8F5B2811D4C3008B358E /* SignUpProposal.swift in Sources */,
 				8451EC0D27E8180A00D8A2DE /* RswiftSwiftUICompatibility.swift in Sources */,
 				842E89F227F25763005ABDCB /* SignUpForm.swift in Sources */,
 				84601BFB27B8458A00BC9638 /* OnboardingEntity.swift in Sources */,
@@ -581,6 +588,7 @@
 				84988A83280B6ADB00E902E6 /* RoundedCornersRectangle.swift in Sources */,
 				84988A85280B6B1300E902E6 /* CornerRadiusMaskModifier.swift in Sources */,
 				84C1F54427E7E10900539E1A /* UpDownWave.swift in Sources */,
+				842A8F592811D453008B358E /* SignInForm.swift in Sources */,
 				84601C0027B8469A00BC9638 /* Stub.swift in Sources */,
 				842A8F512810765D008B358E /* RNTCodeMFAFieldDelegate.swift in Sources */,
 				84988A80280B6A7D00E902E6 /* PhoneNumberField.swift in Sources */,
