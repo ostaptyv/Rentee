@@ -11,6 +11,8 @@ struct ResetPasswordPhoneForm: View {
     @Binding var phoneNumber: String
     @Binding var countryEmoji: Character
     
+    @Environment(\.mainActionButtonSize) var mainActionButtonSize
+    
     private var onSendCodeClosure: (() -> Void)?
     
     var body: some View {
@@ -28,6 +30,7 @@ struct ResetPasswordPhoneForm: View {
             Button("Send code") {
                 onSendCodeClosure?()
             }
+            .buttonStyle(.mainAction(size: mainActionButtonSize))
         }
     }
     
@@ -54,5 +57,6 @@ struct ResetPasswordPhoneForm_Previews: PreviewProvider {
     static var previews: some View {
         ResetPasswordPhoneForm(phoneNumber: .constant(""),
                                countryEmoji: .constant("🇺🇦"))
+        .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
     }
 }

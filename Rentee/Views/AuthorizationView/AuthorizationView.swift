@@ -50,7 +50,7 @@ struct AuthorizationView: View {
                         }
                     }
                 }
-                .buttonStyle(.mainAction(size: buttonSize))
+                .environment(\.mainActionButtonSize, buttonSize)
                 
                 Spacer(minLength: 61)
             }

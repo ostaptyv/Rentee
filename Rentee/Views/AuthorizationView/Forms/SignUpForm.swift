@@ -22,6 +22,8 @@ struct SignUpForm: View {
     @Binding var password: String
     @Binding var confirmedPassword: String
     
+    @Environment(\.mainActionButtonSize) var mainActionButtonSize
+    
     private var onSignUpClosure: (() -> Void)?
     private var onSignInClosure: (() -> Void)?
     
@@ -66,6 +68,7 @@ struct SignUpForm: View {
             Button("Sign Up") {
                 onSignUpClosure?()
             }
+            .buttonStyle(.mainAction(size: mainActionButtonSize))
         }
         .onSubmit {
             switch focusedField! {
@@ -128,7 +131,7 @@ struct SignUpForm_Previews: PreviewProvider {
                        countryEmoji: .constant("🇺🇦"),
                        password: .constant(""),
                        confirmedPassword: .constant(""))
-            .buttonStyle(.mainAction(size: CGSize(width: 184, height: 50)))
         }
+        .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
     }
 }

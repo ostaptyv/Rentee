@@ -35,6 +35,8 @@
 		84601BF027B8187200BC9638 /* StaticImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84601BEF27B8187200BC9638 /* StaticImages.xcassets */; };
 		84601BFB27B8458A00BC9638 /* OnboardingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84601BFA27B8458A00BC9638 /* OnboardingEntity.swift */; };
 		84601C0027B8469A00BC9638 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84601BFF27B8469A00BC9638 /* Stub.swift */; };
+		84605D672811F23B00EC31A7 /* SideActionButtonStyleSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D662811F23B00EC31A7 /* SideActionButtonStyleSizeKey.swift */; };
+		84605D692811F37E00EC31A7 /* MainActionButtonStyleSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D682811F37E00EC31A7 /* MainActionButtonStyleSizeKey.swift */; };
 		846E074A27F2102500BC06A7 /* StatusBarStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E074927F2102500BC06A7 /* StatusBarStyleModifier.swift */; };
 		84898DFF280E013F00187A9E /* MFACodeForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84898DFE280E013F00187A9E /* MFACodeForm.swift */; };
 		84898E01280E067700187A9E /* TextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84898E00280E067700187A9E /* TextButtonStyle.swift */; };
@@ -91,6 +93,8 @@
 		84601BEF27B8187200BC9638 /* StaticImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StaticImages.xcassets; sourceTree = "<group>"; };
 		84601BFA27B8458A00BC9638 /* OnboardingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEntity.swift; sourceTree = "<group>"; };
 		84601BFF27B8469A00BC9638 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		84605D662811F23B00EC31A7 /* SideActionButtonStyleSizeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideActionButtonStyleSizeKey.swift; sourceTree = "<group>"; };
+		84605D682811F37E00EC31A7 /* MainActionButtonStyleSizeKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActionButtonStyleSizeKey.swift; sourceTree = "<group>"; };
 		846E074927F2102500BC06A7 /* StatusBarStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleModifier.swift; sourceTree = "<group>"; };
 		84898DFE280E013F00187A9E /* MFACodeForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFACodeForm.swift; sourceTree = "<group>"; };
 		84898E00280E067700187A9E /* TextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonStyle.swift; sourceTree = "<group>"; };
@@ -196,6 +200,15 @@
 				84898E02280E188800187A9E /* ShieldPictogram.swift */,
 			);
 			path = Pictograms;
+			sourceTree = "<group>";
+		};
+		84364F4D2811F18C0056F1B5 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				84605D682811F37E00EC31A7 /* MainActionButtonStyleSizeKey.swift */,
+				84605D662811F23B00EC31A7 /* SideActionButtonStyleSizeKey.swift */,
+			);
+			path = Environments;
 			sourceTree = "<group>";
 		};
 		8439959127174F8D00BC1CCE /* Extensions */ = {
@@ -343,6 +356,7 @@
 		84E3929427EA83FE00BE0436 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				84364F4D2811F18C0056F1B5 /* Environments */,
 				84988A86280C2B8900E902E6 /* Enums */,
 				84988A81280B6AC700E902E6 /* Shapes */,
 				846E074827F20FF900BC06A7 /* Modifiers */,
@@ -559,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84605D672811F23B00EC31A7 /* SideActionButtonStyleSizeKey.swift in Sources */,
 				842E89E327F24FF1005ABDCB /* AuthViewBackground.swift in Sources */,
 				84898DFF280E013F00187A9E /* MFACodeForm.swift in Sources */,
 				846E074A27F2102500BC06A7 /* StatusBarStyleModifier.swift in Sources */,
@@ -601,6 +616,7 @@
 				842A8F512810765D008B358E /* RNTCodeMFAFieldDelegate.swift in Sources */,
 				84988A80280B6A7D00E902E6 /* PhoneNumberField.swift in Sources */,
 				84E3929827EA845600BE0436 /* BackgroundSlide.swift in Sources */,
+				84605D692811F37E00EC31A7 /* MainActionButtonStyleSizeKey.swift in Sources */,
 				84CC08AD27F0906700BD05BA /* AuthorizationView.swift in Sources */,
 				84E3929A27EA84A700BE0436 /* TabCell.swift in Sources */,
 			);

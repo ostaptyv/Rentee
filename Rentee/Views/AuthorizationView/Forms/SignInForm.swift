@@ -19,6 +19,8 @@ struct SignInForm: View {
     @Binding var countryEmoji: Character
     @Binding var password: String
     
+    @Environment(\.mainActionButtonSize) var mainActionButtonSize
+    
     private var onSignUpClosure: (() -> Void)?
     private var onSignInClosure: (() -> Void)?
     private var onPasswordResetClosure: (() -> Void)?
@@ -67,6 +69,7 @@ struct SignInForm: View {
         Button("Sign In") {
             onSignInClosure?()
         }
+        .buttonStyle(.mainAction(size: mainActionButtonSize))
         
         Spacer(minLength: 15)
         SignUpProposal()
@@ -115,6 +118,6 @@ struct SignInForm_Previews: PreviewProvider {
                        countryEmoji: .constant("🇺🇦"),
                        password: .constant(""))
         }
-        .buttonStyle(.mainAction(size: CGSize(width: 184, height: 50)))
+        .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
     }
 }
