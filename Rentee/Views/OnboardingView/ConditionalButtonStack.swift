@@ -13,13 +13,16 @@ struct ConditionalButtonStack: View {
     let buttonSize = CGSize(width: 132, height: 50)
     
     var body: some View {
-        if selection != tabsCount - 1 {
-            NavigationButtonStack(selection: $selection,
-                                  tabsCount: tabsCount,
-                                  buttonSize: buttonSize)
-        } else {
-            AuthButtonStack(buttonSize: buttonSize)
+        Group {
+            if selection != tabsCount - 1 {
+                NavigationButtonStack(selection: $selection,
+                                      tabsCount: tabsCount)
+            } else {
+                AuthButtonStack()
+            }
         }
+        .environment(\.mainActionButtonSize, buttonSize)
+        .environment(\.sideActionButtonSize, buttonSize)
     }
 }
 
