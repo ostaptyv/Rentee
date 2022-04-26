@@ -7,19 +7,15 @@
 
 import SwiftUI
 
-struct MFACodeForm: View {
-    @Binding var mfaCode: String
-    var resendCodeTime: String
-
-    private var onCodeFilledClosure: (() -> Void)?
-    private var onResendClosure: (() -> Void)?
+struct MFACodeForm<ViewModel>: View where ViewModel: MFACodeFormViewModelProtocol {
+    @EnvironmentObject var viewModel: ViewModel
     
     var body: some View {
         OperationDescription("Please enter the verification code sent to your phone number") {
             Header("Your code here") {
-                MFACodeField(text: $mfaCode)
+                MFACodeField(text: $viewModel.mfaCode)
                     .onCodeFilled {
-                        onCodeFilledClosure?()
+                        viewModel.codeFilled()
                     }
                     .textContentType(.oneTimeCode)
                     .frame(height: 55)
@@ -28,50 +24,26 @@ struct MFACodeForm: View {
             
             Spacer(minLength: 15)
             HStack {
-                Text(resendCodeTime)
+                Text(viewModel.resendCodeTime)
                     .font(R.font.notoSansRegular.font(size: 12))
                     .foregroundColor(Color(hex: "7583A0")!)
                 
                 Spacer()
                 
                 Button("Resend") {
-                    onResendClosure?()
+                    viewModel.resendTapped()
                 }
                 .buttonStyle(.textButton)
             }
         }
-    }
-    
-    // MARK: - Modifiers
-    
-    func onCodeFilled(_ closure: @escaping () -> Void) -> MFACodeForm {
-        var view = self
-        view.onCodeFilledClosure = closure
-        
-        return view
-    }
-    func onResend(_ closure: @escaping () -> Void) -> MFACodeForm { 
-        var view = self
-        view.onResendClosure = closure
-        
-        return view
-    }
-    
-    // MARK: - Initializers
-    
-    init(mfaCode: Binding<String>,
-         resendCodeTime: String) {
-        
-        self._mfaCode = mfaCode
-        self.resendCodeTime = resendCodeTime
     }
 }
 
 struct MFACodeForm_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 0) {
-            MFACodeForm(mfaCode: .constant(""),
-                        resendCodeTime: "Resend in 12s")
+            MFACodeForm<Stub.Authorization.MFACodeFormViewModel>()
         }
+        .environmentObject(Stub.authorization.mfaCodeFormViewModel)
     }
 }

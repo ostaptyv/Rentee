@@ -14,7 +14,7 @@
 		842A8F592811D453008B358E /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F582811D453008B358E /* SignInForm.swift */; };
 		842A8F5B2811D4C3008B358E /* SignUpProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F5A2811D4C3008B358E /* SignUpProposal.swift */; };
 		842E89E327F24FF1005ABDCB /* AuthViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */; };
-		842E89E527F2501E005ABDCB /* AuthFieldSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */; };
+		842E89E527F2501E005ABDCB /* AuthFormSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E427F2501E005ABDCB /* AuthFormSheet.swift */; };
 		842E89E727F2503C005ABDCB /* SecureLookUpField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E627F2503C005ABDCB /* SecureLookUpField.swift */; };
 		842E89E927F250A1005ABDCB /* DataField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89E827F250A1005ABDCB /* DataField.swift */; };
 		842E89EE27F2513C005ABDCB /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89ED27F2513C005ABDCB /* UIApplication+endEditing.swift */; };
@@ -26,6 +26,8 @@
 		84364F4A2811E7490056F1B5 /* ResetPasswordPhoneForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84364F492811E7490056F1B5 /* ResetPasswordPhoneForm.swift */; };
 		84364F4C2811E9C00056F1B5 /* OperationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84364F4B2811E9C00056F1B5 /* OperationDescription.swift */; };
 		8439959327174F9B00BC1CCE /* Color+HexInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439959227174F9B00BC1CCE /* Color+HexInit.swift */; };
+		8443DB332813486400E9CC39 /* AuthorizationStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443DB322813486400E9CC39 /* AuthorizationStub.swift */; };
+		8443DB352813488A00E9CC39 /* OnboardingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443DB342813488A00E9CC39 /* OnboardingStub.swift */; };
 		844F41A027F1DB7900EF663F /* RenteeTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F419F27F1DB7800EF663F /* RenteeTextFieldStyle.swift */; };
 		8451EC0627E7E77A00D8A2DE /* LaunchScreen.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8451EC0527E7E77A00D8A2DE /* LaunchScreen.xcassets */; };
 		8451EC0927E80C1300D8A2DE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451EC0827E80C1200D8A2DE /* R.generated.swift */; };
@@ -38,6 +40,22 @@
 		84605D672811F23B00EC31A7 /* SideActionButtonStyleSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D662811F23B00EC31A7 /* SideActionButtonStyleSizeKey.swift */; };
 		84605D692811F37E00EC31A7 /* MainActionButtonStyleSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D682811F37E00EC31A7 /* MainActionButtonStyleSizeKey.swift */; };
 		84605D6B2811FA3800EC31A7 /* ResetPasswordNewPasswordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D6A2811FA3800EC31A7 /* ResetPasswordNewPasswordForm.swift */; };
+		84605D702812B69300EC31A7 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D6F2812B69300EC31A7 /* RouterProtocol.swift */; };
+		84605D732812BC0B00EC31A7 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D722812BC0B00EC31A7 /* ViewModelProtocol.swift */; };
+		84605D752812BE0000EC31A7 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D742812BE0000EC31A7 /* ViewProtocol.swift */; };
+		84605D772812BE8C00EC31A7 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D762812BE8C00EC31A7 /* SignInRouter.swift */; };
+		84605D792812DA6F00EC31A7 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D782812DA6F00EC31A7 /* SignInViewModel.swift */; };
+		84605D812812E84100EC31A7 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D802812E84100EC31A7 /* SignUpViewModel.swift */; };
+		84605D832812E86700EC31A7 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D822812E86700EC31A7 /* SignUpRouter.swift */; };
+		84605D872812E9C600EC31A7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D862812E9C600EC31A7 /* SignUpView.swift */; };
+		84605D892812E9D200EC31A7 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D882812E9D200EC31A7 /* SignInView.swift */; };
+		84605D8D2812EE7900EC31A7 /* SignInFormViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D8C2812EE7900EC31A7 /* SignInFormViewModelProtocol.swift */; };
+		84605D8F2812EE9700EC31A7 /* ResetPasswordPhoneFormViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D8E2812EE9700EC31A7 /* ResetPasswordPhoneFormViewModelProtocol.swift */; };
+		84605D912812EEA900EC31A7 /* ResetPasswordNewPasswordFormViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D902812EEA900EC31A7 /* ResetPasswordNewPasswordFormViewModelProtocol.swift */; };
+		84605D942812FD6800EC31A7 /* SignUpFormViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D932812FD6800EC31A7 /* SignUpFormViewModelProtocol.swift */; };
+		84605D972812FE6E00EC31A7 /* MFACodeFormViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D962812FE6E00EC31A7 /* MFACodeFormViewModelProtocol.swift */; };
+		84605D9A2813026C00EC31A7 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D992813026C00EC31A7 /* OnboardingRouter.swift */; };
+		84605D9D281304DA00EC31A7 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605D9C281304DA00EC31A7 /* OnboardingViewModel.swift */; };
 		846E074A27F2102500BC06A7 /* StatusBarStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E074927F2102500BC06A7 /* StatusBarStyleModifier.swift */; };
 		84898DFF280E013F00187A9E /* MFACodeForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84898DFE280E013F00187A9E /* MFACodeForm.swift */; };
 		84898E01280E067700187A9E /* TextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84898E00280E067700187A9E /* TextButtonStyle.swift */; };
@@ -72,7 +90,7 @@
 		842A8F582811D453008B358E /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
 		842A8F5A2811D4C3008B358E /* SignUpProposal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProposal.swift; sourceTree = "<group>"; };
 		842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewBackground.swift; sourceTree = "<group>"; };
-		842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFieldSheet.swift; sourceTree = "<group>"; };
+		842E89E427F2501E005ABDCB /* AuthFormSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFormSheet.swift; sourceTree = "<group>"; };
 		842E89E627F2503C005ABDCB /* SecureLookUpField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLookUpField.swift; sourceTree = "<group>"; };
 		842E89E827F250A1005ABDCB /* DataField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataField.swift; sourceTree = "<group>"; };
 		842E89ED27F2513C005ABDCB /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
@@ -85,6 +103,8 @@
 		84364F4B2811E9C00056F1B5 /* OperationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDescription.swift; sourceTree = "<group>"; };
 		8439959027174DE100BC1CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8439959227174F9B00BC1CCE /* Color+HexInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+HexInit.swift"; sourceTree = "<group>"; };
+		8443DB322813486400E9CC39 /* AuthorizationStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationStub.swift; sourceTree = "<group>"; };
+		8443DB342813488A00E9CC39 /* OnboardingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStub.swift; sourceTree = "<group>"; };
 		844F419F27F1DB7800EF663F /* RenteeTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenteeTextFieldStyle.swift; sourceTree = "<group>"; };
 		8451EC0527E7E77A00D8A2DE /* LaunchScreen.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchScreen.xcassets; sourceTree = "<group>"; };
 		8451EC0827E80C1200D8A2DE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -97,6 +117,22 @@
 		84605D662811F23B00EC31A7 /* SideActionButtonStyleSizeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideActionButtonStyleSizeKey.swift; sourceTree = "<group>"; };
 		84605D682811F37E00EC31A7 /* MainActionButtonStyleSizeKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActionButtonStyleSizeKey.swift; sourceTree = "<group>"; };
 		84605D6A2811FA3800EC31A7 /* ResetPasswordNewPasswordForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordNewPasswordForm.swift; sourceTree = "<group>"; };
+		84605D6F2812B69300EC31A7 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		84605D722812BC0B00EC31A7 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		84605D742812BE0000EC31A7 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
+		84605D762812BE8C00EC31A7 /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		84605D782812DA6F00EC31A7 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		84605D802812E84100EC31A7 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		84605D822812E86700EC31A7 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		84605D862812E9C600EC31A7 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		84605D882812E9D200EC31A7 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		84605D8C2812EE7900EC31A7 /* SignInFormViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFormViewModelProtocol.swift; sourceTree = "<group>"; };
+		84605D8E2812EE9700EC31A7 /* ResetPasswordPhoneFormViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPhoneFormViewModelProtocol.swift; sourceTree = "<group>"; };
+		84605D902812EEA900EC31A7 /* ResetPasswordNewPasswordFormViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordNewPasswordFormViewModelProtocol.swift; sourceTree = "<group>"; };
+		84605D932812FD6800EC31A7 /* SignUpFormViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormViewModelProtocol.swift; sourceTree = "<group>"; };
+		84605D962812FE6E00EC31A7 /* MFACodeFormViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFACodeFormViewModelProtocol.swift; sourceTree = "<group>"; };
+		84605D992813026C00EC31A7 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		84605D9C281304DA00EC31A7 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		846E074927F2102500BC06A7 /* StatusBarStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleModifier.swift; sourceTree = "<group>"; };
 		84898DFE280E013F00187A9E /* MFACodeForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFACodeForm.swift; sourceTree = "<group>"; };
 		84898E00280E067700187A9E /* TextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonStyle.swift; sourceTree = "<group>"; };
@@ -171,8 +207,8 @@
 				842E89F127F25763005ABDCB /* SignUpForm.swift */,
 				842A8F582811D453008B358E /* SignInForm.swift */,
 				84364F492811E7490056F1B5 /* ResetPasswordPhoneForm.swift */,
-				84898DFE280E013F00187A9E /* MFACodeForm.swift */,
 				84605D6A2811FA3800EC31A7 /* ResetPasswordNewPasswordForm.swift */,
+				84898DFE280E013F00187A9E /* MFACodeForm.swift */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -224,6 +260,54 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		843F09AE28186D1700BD4C37 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				84605D932812FD6800EC31A7 /* SignUpFormViewModelProtocol.swift */,
+				84605D8C2812EE7900EC31A7 /* SignInFormViewModelProtocol.swift */,
+				84605D8E2812EE9700EC31A7 /* ResetPasswordPhoneFormViewModelProtocol.swift */,
+				84605D902812EEA900EC31A7 /* ResetPasswordNewPasswordFormViewModelProtocol.swift */,
+				84605D962812FE6E00EC31A7 /* MFACodeFormViewModelProtocol.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		8443DB2928133E0800E9CC39 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84605D722812BC0B00EC31A7 /* ViewModelProtocol.swift */,
+				843F09AE28186D1700BD4C37 /* Authorization */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8443DB2B28133F7600E9CC39 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				8443DB2C28133F7900E9CC39 /* SignUp */,
+				8443DB2D28133F7E00E9CC39 /* SignIn */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		8443DB2C28133F7900E9CC39 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				84605D862812E9C600EC31A7 /* SignUpView.swift */,
+				842E89F327F25820005ABDCB /* SignInProposal.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		8443DB2D28133F7E00E9CC39 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				84605D882812E9D200EC31A7 /* SignInView.swift */,
+				842A8F5A2811D4C3008B358E /* SignUpProposal.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		8451EC0A27E8161700D8A2DE /* NotoSans */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,8 +347,32 @@
 			isa = PBXGroup;
 			children = (
 				84601BFF27B8469A00BC9638 /* Stub.swift */,
+				8443DB342813488A00E9CC39 /* OnboardingStub.swift */,
+				8443DB322813486400E9CC39 /* AuthorizationStub.swift */,
 			);
 			path = Dummy;
+			sourceTree = "<group>";
+		};
+		84605D6E2812B67800EC31A7 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				84605D6F2812B69300EC31A7 /* RouterProtocol.swift */,
+				84605D992813026C00EC31A7 /* OnboardingRouter.swift */,
+				84605D822812E86700EC31A7 /* SignUpRouter.swift */,
+				84605D762812BE8C00EC31A7 /* SignInRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		84605D712812BBC800EC31A7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8443DB2928133E0800E9CC39 /* Protocols */,
+				84605D9C281304DA00EC31A7 /* OnboardingViewModel.swift */,
+				84605D802812E84100EC31A7 /* SignUpViewModel.swift */,
+				84605D782812DA6F00EC31A7 /* SignInViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		846E074827F20FF900BC06A7 /* Modifiers */ = {
@@ -301,6 +409,8 @@
 				8439959027174DE100BC1CCE /* Info.plist */,
 				849029E62715E50C009152CA /* RenteeApp.swift */,
 				84601BF827B8456A00BC9638 /* Model */,
+				84605D712812BBC800EC31A7 /* ViewModels */,
+				84605D6E2812B67800EC31A7 /* Routers */,
 				84F363562715E5D100127899 /* Views */,
 				8439959127174F8D00BC1CCE /* Extensions */,
 				84F3635A271745D100127899 /* Resources */,
@@ -343,15 +453,14 @@
 		84CC08A927F0904F00BD05BA /* AuthorizationView */ = {
 			isa = PBXGroup;
 			children = (
+				8443DB2B28133F7600E9CC39 /* Flows */,
+				842A8F52281185DB008B358E /* Forms */,
 				842A8F532811860A008B358E /* Fields */,
 				842A8F5728118DA6008B358E /* Pictograms */,
-				842A8F52281185DB008B358E /* Forms */,
 				84CC08AC27F0906700BD05BA /* AuthorizationView.swift */,
-				842E89F327F25820005ABDCB /* SignInProposal.swift */,
-				842A8F5A2811D4C3008B358E /* SignUpProposal.swift */,
 				84364F4B2811E9C00056F1B5 /* OperationDescription.swift */,
 				842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */,
-				842E89E427F2501E005ABDCB /* AuthFieldSheet.swift */,
+				842E89E427F2501E005ABDCB /* AuthFormSheet.swift */,
 			);
 			path = AuthorizationView;
 			sourceTree = "<group>";
@@ -398,6 +507,7 @@
 		84F363562715E5D100127899 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84605D742812BE0000EC31A7 /* ViewProtocol.swift */,
 				84E3929427EA83FE00BE0436 /* Shared */,
 				84E3929527EA841E00BE0436 /* OnboardingView */,
 				84CC08A927F0904F00BD05BA /* AuthorizationView */,
@@ -576,34 +686,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84605D832812E86700EC31A7 /* SignUpRouter.swift in Sources */,
+				8443DB332813486400E9CC39 /* AuthorizationStub.swift in Sources */,
 				84605D672811F23B00EC31A7 /* SideActionButtonStyleSizeKey.swift in Sources */,
+				84605D972812FE6E00EC31A7 /* MFACodeFormViewModelProtocol.swift in Sources */,
 				842E89E327F24FF1005ABDCB /* AuthViewBackground.swift in Sources */,
 				84898DFF280E013F00187A9E /* MFACodeForm.swift in Sources */,
 				846E074A27F2102500BC06A7 /* StatusBarStyleModifier.swift in Sources */,
+				84605D792812DA6F00EC31A7 /* SignInViewModel.swift in Sources */,
 				84E3929E27EA863500BE0436 /* NavigationButtonStack.swift in Sources */,
 				84E3929C27EA84CC00BE0436 /* AuthButtonStack.swift in Sources */,
+				84605D812812E84100EC31A7 /* SignUpViewModel.swift in Sources */,
+				84605D8D2812EE7900EC31A7 /* SignInFormViewModelProtocol.swift in Sources */,
 				849029E72715E50C009152CA /* RenteeApp.swift in Sources */,
+				84605D702812B69300EC31A7 /* RouterProtocol.swift in Sources */,
+				84605D912812EEA900EC31A7 /* ResetPasswordNewPasswordFormViewModelProtocol.swift in Sources */,
 				84898E01280E067700187A9E /* TextButtonStyle.swift in Sources */,
 				842E89F427F25820005ABDCB /* SignInProposal.swift in Sources */,
 				84605D6B2811FA3800EC31A7 /* ResetPasswordNewPasswordForm.swift in Sources */,
+				84605D732812BC0B00EC31A7 /* ViewModelProtocol.swift in Sources */,
 				84C1F54827E7E2FD00539E1A /* CapsulePageControl.swift in Sources */,
+				84605D872812E9C600EC31A7 /* SignUpView.swift in Sources */,
 				842E89E727F2503C005ABDCB /* SecureLookUpField.swift in Sources */,
 				84364F4A2811E7490056F1B5 /* ResetPasswordPhoneForm.swift in Sources */,
 				8451EC0927E80C1300D8A2DE /* R.generated.swift in Sources */,
+				84605D752812BE0000EC31A7 /* ViewProtocol.swift in Sources */,
 				84F363592715EA9100127899 /* OnboardingView.swift in Sources */,
+				84605D892812E9D200EC31A7 /* SignInView.swift in Sources */,
 				842E89F627F34782005ABDCB /* Header.swift in Sources */,
 				842A8F5B2811D4C3008B358E /* SignUpProposal.swift in Sources */,
 				8451EC0D27E8180A00D8A2DE /* RswiftSwiftUICompatibility.swift in Sources */,
 				842E89F227F25763005ABDCB /* SignUpForm.swift in Sources */,
 				84601BFB27B8458A00BC9638 /* OnboardingEntity.swift in Sources */,
-				842E89E527F2501E005ABDCB /* AuthFieldSheet.swift in Sources */,
+				842E89E527F2501E005ABDCB /* AuthFormSheet.swift in Sources */,
 				84FB9B6F280F2BD900B95697 /* RNTCodeMFAField.swift in Sources */,
 				84898E03280E188900187A9E /* ShieldPictogram.swift in Sources */,
+				84605D772812BE8C00EC31A7 /* SignInRouter.swift in Sources */,
 				8429026527E3561B00A6B53D /* ActionButtonStyle.swift in Sources */,
 				84988A88280C2B9000E902E6 /* Corner.swift in Sources */,
 				842A8F4F28106A19008B358E /* String+localizedError.swift in Sources */,
 				842E89EE27F2513C005ABDCB /* UIApplication+endEditing.swift in Sources */,
 				8439959327174F9B00BC1CCE /* Color+HexInit.swift in Sources */,
+				84605D9D281304DA00EC31A7 /* OnboardingViewModel.swift in Sources */,
 				842A8F5628118D30008B358E /* Pictogram.swift in Sources */,
 				842E89F027F25750005ABDCB /* RenteeLogo.swift in Sources */,
 				842E89F927F35A0C005ABDCB /* ErrorMessageModifier.swift in Sources */,
@@ -612,11 +736,15 @@
 				842E89E927F250A1005ABDCB /* DataField.swift in Sources */,
 				844F41A027F1DB7900EF663F /* RenteeTextFieldStyle.swift in Sources */,
 				84E392A027EA86B700BE0436 /* ConditionalButtonStack.swift in Sources */,
+				84605D8F2812EE9700EC31A7 /* ResetPasswordPhoneFormViewModelProtocol.swift in Sources */,
 				84988A83280B6ADB00E902E6 /* RoundedCornersRectangle.swift in Sources */,
 				84988A85280B6B1300E902E6 /* CornerRadiusMaskModifier.swift in Sources */,
+				84605D942812FD6800EC31A7 /* SignUpFormViewModelProtocol.swift in Sources */,
+				8443DB352813488A00E9CC39 /* OnboardingStub.swift in Sources */,
 				84C1F54427E7E10900539E1A /* UpDownWave.swift in Sources */,
 				842A8F592811D453008B358E /* SignInForm.swift in Sources */,
 				84601C0027B8469A00BC9638 /* Stub.swift in Sources */,
+				84605D9A2813026C00EC31A7 /* OnboardingRouter.swift in Sources */,
 				842A8F512810765D008B358E /* RNTCodeMFAFieldDelegate.swift in Sources */,
 				84988A80280B6A7D00E902E6 /* PhoneNumberField.swift in Sources */,
 				84E3929827EA845600BE0436 /* BackgroundSlide.swift in Sources */,

@@ -7,17 +7,15 @@
 
 import SwiftUI
 
-struct ResetPasswordPhoneForm: View {
-    @Binding var phoneNumber: String
-    @Binding var countryEmoji: Character
+struct ResetPasswordPhoneForm<ViewModel>: View where ViewModel: ResetPasswordPhoneFormViewModelProtocol {
+    @EnvironmentObject  var viewModel: ViewModel
     
     @Environment(\.mainActionButtonSize) var mainActionButtonSize
     
-    private var onSendCodeClosure: (() -> Void)?
-    
     var body: some View {
         OperationDescription("We will send a code to your phone to reset your password.") {
-            DataField(text: $phoneNumber, kind: .phoneNumber(country: $countryEmoji))
+            DataField(text: $viewModel.phoneNumber,
+                      kind: .phoneNumber(country: $viewModel.countryEmoji))
                 .title("Phone number")
                 .prompt("Your phone number here")
                 .errorMessage()
@@ -28,35 +26,17 @@ struct ResetPasswordPhoneForm: View {
             Spacer(minLength: 20)
             
             Button("Send code") {
-                onSendCodeClosure?()
+                viewModel.sendCodeTapped()
             }
             .buttonStyle(.mainAction(size: mainActionButtonSize))
         }
-    }
-    
-    // MARK: - Modifiers
-    
-    func onSendCode(_ closure: @escaping () -> Void) -> ResetPasswordPhoneForm {
-        var view = self
-        view.onSendCodeClosure = closure
-        
-        return view
-    }
-    
-    // MARK: - Initializers
-    
-    init(phoneNumber: Binding<String>,
-         countryEmoji: Binding<Character>) {
-        
-        self._phoneNumber = phoneNumber
-        self._countryEmoji = countryEmoji
     }
 }
 
 struct ResetPasswordPhoneForm_Previews: PreviewProvider {
     static var previews: some View {
-        ResetPasswordPhoneForm(phoneNumber: .constant(""),
-                               countryEmoji: .constant("🇺🇦"))
-        .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
+        ResetPasswordPhoneForm<Stub.Authorization.ResetPasswordPhoneFormViewModel>()
+            .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
+            .environmentObject(Stub.authorization.resetPasswordPhoneFormViewModel)
     }
 }

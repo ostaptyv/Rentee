@@ -7,47 +7,30 @@
 
 import SwiftUI
 
+extension AuthorizationView {
+    enum Flow {
+        case signUp
+        case signIn
+    }
+}
+
 struct AuthorizationView: View {
-    @State var fullName = ""
-    @State var phoneNumber = ""
-    @State var countryEmoji: Character = "🇺🇦"
-    @State var password = ""
-    @State var confirmedPassword = ""
+    @State var pictogram: PictogramType = .renteeLogo
     
-    @State var mfaCode = "1234"
-    
-    @State var isVerification = false
-    @State var currentPictogram: PictogramType = .renteeLogo
-    
+    let flow: Flow
     let buttonSize = CGSize(width: 184, height: 50)
     
     var body: some View {
         AuthViewBackground {
             VStack(spacing: 0) {
-                Pictogram(type: $currentPictogram)
+                Pictogram(type: $pictogram)
                 
-                AuthFieldSheet {
-                    if !isVerification {
-                        SignUpForm(fullName: $fullName,
-                                   phoneNumber: $phoneNumber,
-                                   countryEmoji: $countryEmoji,
-                                   password: $password,
-                                   confirmedPassword: $confirmedPassword)
-                        .onSignUp {
-                            withAnimation {
-                                isVerification = true
-                                currentPictogram = .verify
-                            }
-                        }
-                    } else {
-                        MFACodeForm(mfaCode: $mfaCode,
-                                    resendCodeTime: "Resend in 12s")
-                        .onResend {
-                            withAnimation {
-                                isVerification = false
-                                currentPictogram = .renteeLogo
-                            }
-                        }
+                AuthFormSheet {
+                    switch flow {
+                    case .signUp:
+                        SignUpView(pictogram: $pictogram)
+                    case .signIn:
+                        SignInView(pictogram: $pictogram)
                     }
                 }
                 .environment(\.mainActionButtonSize, buttonSize)
@@ -58,6 +41,10 @@ struct AuthorizationView: View {
         .onTapGesture {
             UIApplication.shared.endEditing()
         }
+    }
+    
+    init(flow: Flow) {
+        self.flow = flow
     }
 }
 
@@ -75,7 +62,11 @@ struct AuthorizationView_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-        AuthorizationView()
+        AuthorizationView(flow: .signUp)
+            .previewDevice(PreviewDevice(rawValue: currentPreviewDevice))
+            .previewDisplayName(currentPreviewDevice)
+        
+        AuthorizationView(flow: .signIn)
             .previewDevice(PreviewDevice(rawValue: currentPreviewDevice))
             .previewDisplayName(currentPreviewDevice)
     }

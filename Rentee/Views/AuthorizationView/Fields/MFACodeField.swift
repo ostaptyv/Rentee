@@ -12,6 +12,7 @@ struct MFACodeField: UIViewRepresentable {
     
     private let digits = 4
     private var titleKey: LocalizedStringKey
+    
     private var onCodeFilledClosure: (() -> Void)?
     
     // MARK: - UIViewRepresentable implementation

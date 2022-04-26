@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignInForm: View {
+struct SignInForm<ViewModel>: View where ViewModel: SignInFormViewModelProtocol {
     private enum FieldType {
         case phoneNumber
         case password
@@ -15,19 +15,14 @@ struct SignInForm: View {
     
     @FocusState private var focusedField: FieldType?
     
-    @Binding var phoneNumber: String
-    @Binding var countryEmoji: Character
-    @Binding var password: String
+    @EnvironmentObject var viewModel: ViewModel
     
     @Environment(\.mainActionButtonSize) var mainActionButtonSize
     
-    private var onSignUpClosure: (() -> Void)?
-    private var onSignInClosure: (() -> Void)?
-    private var onPasswordResetClosure: (() -> Void)?
-    
     var body: some View {
         VStack(spacing: 20) {
-            DataField(text: $phoneNumber, kind: .phoneNumber(country: $countryEmoji))
+            DataField(text: $viewModel.phoneNumber,
+                      kind: .phoneNumber(country: $viewModel.countryEmoji))
                 .title("Phone number")
                 .prompt("Your phone number here")
                 .errorMessage()
@@ -36,7 +31,7 @@ struct SignInForm: View {
                 .focused($focusedField, equals: .phoneNumber)
                 .submitLabel(.next)
             
-            DataField(text: $password, kind: .secureLookUp)
+            DataField(text: $viewModel.password, kind: .secureLookUp)
                 .title("Password")
                 .prompt("Password...")
                 .errorMessage()
@@ -58,7 +53,7 @@ struct SignInForm: View {
         Spacer(minLength: 15)
         HStack {
             Button("Forgot your password?") {
-                onPasswordResetClosure?()
+                viewModel.forgotPasswordTapped()
             }
             .buttonStyle(.textButton)
             
@@ -67,57 +62,24 @@ struct SignInForm: View {
         
         Spacer(minLength: 20)
         Button("Sign In") {
-            onSignInClosure?()
+            viewModel.signInTapped()
         }
         .buttonStyle(.mainAction(size: mainActionButtonSize))
         
         Spacer(minLength: 15)
         SignUpProposal()
             .onSignUp {
-                onSignUpClosure?()
+                viewModel.signUpTapped()
             }
-    }
-    
-    // MARK: - Modifiers
-    
-    func onSignUp(_ closure: @escaping () -> Void) -> SignInForm {
-        var view = self
-        view.onSignUpClosure = closure
-        
-        return view
-    }
-    func onSignIn(_ closure: @escaping () -> Void) -> SignInForm {
-        var view = self
-        view.onSignInClosure = closure
-        
-        return view
-    }
-    func onPasswordReset(_ closure: @escaping () -> Void) -> SignInForm {
-        var view = self
-        view.onPasswordResetClosure = closure
-        
-        return view
-    }
-    
-    // MARK: - Initializers
-    
-    init(phoneNumber: Binding<String>,
-         countryEmoji: Binding<Character>,
-         password: Binding<String>) {
-        
-        self._phoneNumber = phoneNumber
-        self._countryEmoji = countryEmoji
-        self._password = password
     }
 }
 
 struct SignInForm_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 0) {
-            SignInForm(phoneNumber: .constant(""),
-                       countryEmoji: .constant("🇺🇦"),
-                       password: .constant(""))
+            SignInForm<Stub.Authorization.SignInFormViewModel>()
         }
         .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
+        .environmentObject(Stub.authorization.signInFormViewModel)
     }
 }

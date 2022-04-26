@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct AuthButtonStack: View {
+    
     @Environment(\.mainActionButtonSize) var mainActionButtonSize
     @Environment(\.sideActionButtonSize) var sideActionButtonSize
     
+    @EnvironmentObject var viewModel: OnboardingViewModel
+    
     var body: some View {
         HStack(alignment: .center, spacing: 16) {
-            Button("Sing Up") {
-                print("signUpButtonTaped")
+            Button("Sign Up") {
+                viewModel.route = .signUp
             }
             .buttonStyle(.mainAction(size: mainActionButtonSize))
             
-            Button("Sing in") {
-                print("signInButtonTaped")
+            Button("Sign in") {
+                viewModel.route = .signIn
             }
             .buttonStyle(.sideAction(size: sideActionButtonSize))
         }

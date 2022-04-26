@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignUpForm: View {
+struct SignUpForm<ViewModel>: View where ViewModel: SignUpFormViewModelProtocol {
     private enum FieldType {
         case fullName
         case phoneNumber
@@ -16,20 +16,13 @@ struct SignUpForm: View {
     }
     @FocusState private var focusedField: FieldType?
     
-    @Binding var fullName: String
-    @Binding var phoneNumber: String
-    @Binding var countryEmoji: Character
-    @Binding var password: String
-    @Binding var confirmedPassword: String
+    @EnvironmentObject var viewModel: ViewModel
     
     @Environment(\.mainActionButtonSize) var mainActionButtonSize
     
-    private var onSignUpClosure: (() -> Void)?
-    private var onSignInClosure: (() -> Void)?
-    
     var body: some View {
         VStack(spacing: 20) {
-            DataField(text: $fullName)
+            DataField(text: $viewModel.fullName)
                 .title("Your full name")
                 .prompt("E.g. John Smith")
                 .errorMessage()
@@ -38,7 +31,8 @@ struct SignUpForm: View {
                 .focused($focusedField, equals: .fullName)
                 .submitLabel(.next)
             
-            DataField(text: $phoneNumber, kind: .phoneNumber(country: $countryEmoji))
+            DataField(text: $viewModel.phoneNumber,
+                      kind: .phoneNumber(country: $viewModel.countryEmoji))
                 .title("Phone number")
                 .prompt("Your phone number here")
                 .errorMessage()
@@ -47,7 +41,7 @@ struct SignUpForm: View {
                 .focused($focusedField, equals: .phoneNumber)
                 .submitLabel(.next)
             
-            DataField(text: $password, kind: .secureLookUp)
+            DataField(text: $viewModel.password, kind: .secureLookUp)
                 .title("Password")
                 .prompt("Password...")
                 .errorMessage()
@@ -56,7 +50,7 @@ struct SignUpForm: View {
                 .focused($focusedField, equals: .password)
                 .submitLabel(.next)
             
-            DataField(text: $confirmedPassword, kind: .secureLookUp)
+            DataField(text: $viewModel.confirmedPassword, kind: .secureLookUp)
                 .title("Retype your password")
                 .prompt("Confirm password...")
                 .errorMessage()
@@ -66,7 +60,7 @@ struct SignUpForm: View {
                 .submitLabel(.done)
             
             Button("Sign Up") {
-                onSignUpClosure?()
+                viewModel.signUpTapped()
             }
             .buttonStyle(.mainAction(size: mainActionButtonSize))
         }
@@ -88,50 +82,17 @@ struct SignUpForm: View {
         
         SignInProposal()
             .onSignIn {
-                onSignInClosure?()
+                viewModel.signInTapped()
             }
-    }
-    
-    // MARK: - Modifiers
-    
-    func onSignUp(_ closure: @escaping () -> Void) -> SignUpForm {
-        var view = self
-        view.onSignUpClosure = closure
-        
-        return view
-    }
-    func onSignIn(_ closure: @escaping () -> Void) -> SignUpForm {
-        var view = self
-        view.onSignInClosure = closure
-        
-        return view
-    }
-    
-    // MARK: - Initializers
-    
-    init(fullName: Binding<String>,
-         phoneNumber: Binding<String>,
-         countryEmoji: Binding<Character>,
-         password: Binding<String>,
-         confirmedPassword: Binding<String>) {
-        
-        self._fullName = fullName
-        self._phoneNumber = phoneNumber
-        self._countryEmoji = countryEmoji
-        self._password = password
-        self._confirmedPassword = confirmedPassword
     }
 }
 
 struct SignUpForm_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 0) {
-            SignUpForm(fullName: .constant(""),
-                       phoneNumber: .constant(""),
-                       countryEmoji: .constant("🇺🇦"),
-                       password: .constant(""),
-                       confirmedPassword: .constant(""))
+            SignUpForm<Stub.Authorization.SignUpFormViewModel>()
         }
         .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
+        .environmentObject(Stub.authorization.signUpFormViewModel)
     }
 }

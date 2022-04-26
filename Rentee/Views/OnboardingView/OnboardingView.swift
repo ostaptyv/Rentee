@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct OnboardingView: View {
+struct OnboardingView: ViewProtocol {
+    @StateObject var viewModel = OnboardingViewModel()
+    let router = OnboardingRouter()
+    
+    @State var route: OnboardingRoute = .initial
     @State var selection = 0
     
     private var onboardingEntities: [OnboardingEntity] {
@@ -15,30 +19,42 @@ struct OnboardingView: View {
     }
     
     var body: some View {
-        VStack {
-            TabView(selection: $selection.animation()) {
-                ForEach(onboardingEntities.indices, id: \.self) { index in
-                    TabCell(entity: onboardingEntities[index])
+        Group {
+            if route == .onboarding {
+                VStack(spacing: 0) {
+                    TabView(selection: $selection.animation()) {
+                        ForEach(onboardingEntities.indices, id: \.self) { index in
+                            TabCell(entity: onboardingEntities[index])
+                        }
+                    }
+                    .tabViewStyle(.page(indexDisplayMode: .never))
+                    
+                    Spacer(minLength: 33)
+                    CapsulePageControl(pagesCount: onboardingEntities.count,
+                                       selection: $selection.animation(),
+                                       dotColor: Color(hex: "E5F1FF")!,
+                                       selectedDotColor: Color(hex: "79A5D4")!)
+                    
+                    Spacer(minLength: 33)
+                    ConditionalButtonStack(selection: $selection,
+                                           tabsCount: onboardingEntities.count)
+                    .animation(.default, value: selection)
+                    .environmentObject(viewModel)
+                    
+                    Spacer(minLength: 46)
                 }
-                
+                .edgesIgnoringSafeArea([.top, .bottom])
+                .statusBarStyle(.dark)
+            } else {
+                router.view(for: route)
+                    .transition(.move(edge: .trailing))
             }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            
-            Spacer(minLength: 33)
-            CapsulePageControl(pagesCount: onboardingEntities.count,
-                               selection: $selection.animation(),
-                               dotColor: Color(hex: "E5F1FF")!,
-                               selectedDotColor: Color(hex: "79A5D4")!)
-            
-            Spacer(minLength: 33)
-            ConditionalButtonStack(selection: $selection,
-                                   tabsCount: onboardingEntities.count)
-                .animation(.default, value: selection)
-            
-            Spacer(minLength: 46)
         }
-        .edgesIgnoringSafeArea([.top, .bottom])
-        .statusBarStyle(.dark)
+        .onReceive(viewModel.$route.compactMap { $0 }) { route in
+            withAnimation {
+                self.route = route
+            }
+        }
     }
 }
 

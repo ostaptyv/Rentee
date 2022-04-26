@@ -1,5 +1,5 @@
 //
-//  AuthFieldSheet.swift
+//  AuthFormSheet.swift
 //  Rentee
 //
 //  Created by Ostap Tyvonovych on 28.03.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AuthFieldSheet<Content: View>: View {
+struct AuthFormSheet<Content: View>: View {
     private let content: () -> Content
     
     var body: some View {
@@ -16,7 +16,7 @@ struct AuthFieldSheet<Content: View>: View {
                 .foregroundColor(.white)
                 .cornerRadius(25)
             
-            VStack {
+            VStack(spacing: 0) {
                 content()
             }
             .padding(24)
@@ -32,7 +32,7 @@ struct AuthFieldSheet<Content: View>: View {
 
 struct AuthFieldSheet_Previews: PreviewProvider {
     static var previews: some View {
-        AuthFieldSheet {
+        AuthFormSheet {
             
         }
     }

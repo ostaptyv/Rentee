@@ -7,23 +7,20 @@
 
 import SwiftUI
 
-struct ResetPasswordNewPasswordForm: View {
+struct ResetPasswordNewPasswordForm<ViewModel>: View where ViewModel: ResetPasswordNewPasswordFormViewModelProtocol {
     private enum FieldType {
         case newPassword
         case confirmedPassword
     }
     @FocusState private var focusedField: FieldType?
     
-    @Binding var password: String
-    @Binding var confirmedPassword: String
+    @EnvironmentObject var viewModel: ViewModel
     
     @Environment(\.mainActionButtonSize) var mainActionButtonSize
     
-    private var onSignInClosure: (() -> Void)?
-    
     var body: some View {
         VStack(spacing: 20) {
-            DataField(text: $password, kind: .secureLookUp)
+            DataField(text: $viewModel.password, kind: .secureLookUp)
                 .title("New password")
                 .prompt("Password...")
                 .errorMessage()
@@ -32,7 +29,7 @@ struct ResetPasswordNewPasswordForm: View {
                 .focused($focusedField, equals: .newPassword)
                 .submitLabel(.next)
             
-            DataField(text: $confirmedPassword, kind: .secureLookUp)
+            DataField(text: $viewModel.confirmedPassword, kind: .secureLookUp)
                 .title("Retype your password")
                 .prompt("Confirm password...")
                 .errorMessage()
@@ -42,7 +39,7 @@ struct ResetPasswordNewPasswordForm: View {
                 .submitLabel(.done)
             
             Button("Sign In") {
-                onSignInClosure?()
+                viewModel.signInTapped()
             }
             .buttonStyle(.mainAction(size: mainActionButtonSize))
         }
@@ -55,30 +52,12 @@ struct ResetPasswordNewPasswordForm: View {
             }
         }
     }
-    
-    // MARK: - Modifiers
-    
-    func onSignIn(_ closure: @escaping () -> Void) -> ResetPasswordNewPasswordForm {
-        var view = self
-        view.onSignInClosure = closure
-        
-        return view
-    }
-    
-    // MARK: - Initializers
-    
-    init(password: Binding<String>,
-         confirmedPassword: Binding<String>) {
-        
-        self._password = password
-        self._confirmedPassword = confirmedPassword
-    }
 }
 
 struct ResetPasswordNewPasswordForm_Previews: PreviewProvider {
     static var previews: some View {
-        ResetPasswordNewPasswordForm(password: .constant(""),
-                                     confirmedPassword: .constant(""))
-        .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
+        ResetPasswordNewPasswordForm<Stub.Authorization.ResetPasswordNewPasswordFormViewModel>()
+            .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
+            .environmentObject(Stub.authorization.resetPasswordNewPasswordFormViewModel)
     }
 }
