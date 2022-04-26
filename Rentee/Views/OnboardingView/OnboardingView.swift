@@ -14,8 +14,8 @@ struct OnboardingView: ViewProtocol {
     @State var route: OnboardingRoute = .initial
     @State var selection = 0
     
-    private var onboardingEntities: [OnboardingEntity] {
-        return Stub.onboardingEntities
+    private var onboardingEntities: [OnboardingCardEntity] {
+        return Stubs.onboarding.cards
     }
     
     var body: some View {

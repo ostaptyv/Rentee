@@ -40,10 +40,12 @@ struct MFACodeForm<ViewModel>: View where ViewModel: MFACodeFormViewModelProtoco
 }
 
 struct MFACodeForm_Previews: PreviewProvider {
+    typealias PreviewMFACodeForm = MFACodeForm<Stubs.Authorization.MFACodeFormViewModel>
+    
     static var previews: some View {
         VStack(spacing: 0) {
-            MFACodeForm<Stub.Authorization.MFACodeFormViewModel>()
+            PreviewMFACodeForm()
         }
-        .environmentObject(Stub.authorization.mfaCodeFormViewModel)
+        .environmentObject(Stubs.authorization.mfaCodeFormViewModel)
     }
 }

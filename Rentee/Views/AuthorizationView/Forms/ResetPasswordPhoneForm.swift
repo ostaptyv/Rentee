@@ -34,9 +34,12 @@ struct ResetPasswordPhoneForm<ViewModel>: View where ViewModel: ResetPasswordPho
 }
 
 struct ResetPasswordPhoneForm_Previews: PreviewProvider {
+    // swiftlint:disable:next line_length
+    typealias PreviewResetPasswordPhoneForm = ResetPasswordPhoneForm<Stubs.Authorization.ResetPasswordPhoneFormViewModel>
+    
     static var previews: some View {
-        ResetPasswordPhoneForm<Stub.Authorization.ResetPasswordPhoneFormViewModel>()
+        PreviewResetPasswordPhoneForm()
             .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
-            .environmentObject(Stub.authorization.resetPasswordPhoneFormViewModel)
+            .environmentObject(Stubs.authorization.resetPasswordPhoneFormViewModel)
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabCell: View {
-    private(set) var entity: OnboardingEntity
+    private(set) var entity: OnboardingCardEntity
     
     var body: some View {
         VStack {
@@ -42,8 +42,8 @@ struct TabCell: View {
 }
 
 struct TabCell_Previews: PreviewProvider {
-    private static var onboardingEntities: [OnboardingEntity] {
-        return Stub.onboardingEntities
+    private static var onboardingEntities: [OnboardingCardEntity] {
+        return Stubs.onboarding.cards
     }
     
     static var previews: some View {

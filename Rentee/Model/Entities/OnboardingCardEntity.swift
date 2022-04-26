@@ -1,5 +1,5 @@
 //
-//  OnboardingEntity.swift
+//  OnboardingCardEntity.swift
 //  Rentee
 //
 //  Created by Ostap Tyvonovych on 12.02.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OnboardingEntity: Identifiable {
+struct OnboardingCardEntity: Identifiable {
     let id: UUID
     
     let imageData: Data

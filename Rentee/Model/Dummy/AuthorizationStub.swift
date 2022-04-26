@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Stub {
+extension Stubs {
     struct authorization {
         static let signUpFormViewModel = Authorization.SignUpFormViewModel()
         static let signInFormViewModel = Authorization.SignInFormViewModel()

@@ -88,11 +88,13 @@ struct SignUpForm<ViewModel>: View where ViewModel: SignUpFormViewModelProtocol 
 }
 
 struct SignUpForm_Previews: PreviewProvider {
+    typealias PreviewSignUpForm = SignUpForm<Stubs.Authorization.SignUpFormViewModel>
+    
     static var previews: some View {
         VStack(spacing: 0) {
-            SignUpForm<Stub.Authorization.SignUpFormViewModel>()
+            PreviewSignUpForm()
         }
         .environment(\.mainActionButtonSize, CGSize(width: 184, height: 50))
-        .environmentObject(Stub.authorization.signUpFormViewModel)
+        .environmentObject(Stubs.authorization.signUpFormViewModel)
     }
 }
