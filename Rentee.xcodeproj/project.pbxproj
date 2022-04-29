@@ -260,27 +260,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		843F09AE28186D1700BD4C37 /* Authorization */ = {
-			isa = PBXGroup;
-			children = (
-				84605D932812FD6800EC31A7 /* SignUpFormViewModelProtocol.swift */,
-				84605D8C2812EE7900EC31A7 /* SignInFormViewModelProtocol.swift */,
-				84605D8E2812EE9700EC31A7 /* ResetPasswordPhoneFormViewModelProtocol.swift */,
-				84605D902812EEA900EC31A7 /* ResetPasswordNewPasswordFormViewModelProtocol.swift */,
-				84605D962812FE6E00EC31A7 /* MFACodeFormViewModelProtocol.swift */,
-			);
-			path = Authorization;
-			sourceTree = "<group>";
-		};
-		8443DB2928133E0800E9CC39 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				84605D722812BC0B00EC31A7 /* ViewModelProtocol.swift */,
-				843F09AE28186D1700BD4C37 /* Authorization */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		8443DB2B28133F7600E9CC39 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,13 +305,13 @@
 			path = PTSerif;
 			sourceTree = "<group>";
 		};
-		84601BF827B8456A00BC9638 /* Model */ = {
+		84601BF827B8456A00BC9638 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				84601BFC27B8466800BC9638 /* Dummy */,
 				84601BF927B8456E00BC9638 /* Entities */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		84601BF927B8456E00BC9638 /* Entities */ = {
@@ -353,26 +332,88 @@
 			path = Dummy;
 			sourceTree = "<group>";
 		};
-		84605D6E2812B67800EC31A7 /* Routers */ = {
+		8467EB4228187C46003B0144 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				84605D6F2812B69300EC31A7 /* RouterProtocol.swift */,
-				84605D992813026C00EC31A7 /* OnboardingRouter.swift */,
-				84605D822812E86700EC31A7 /* SignUpRouter.swift */,
-				84605D762812BE8C00EC31A7 /* SignInRouter.swift */,
+				8467EB4328187C4B003B0144 /* Onboarding */,
+				8467EB4428187C50003B0144 /* Authorization */,
 			);
-			path = Routers;
+			path = Modules;
 			sourceTree = "<group>";
 		};
-		84605D712812BBC800EC31A7 /* ViewModels */ = {
+		8467EB4328187C4B003B0144 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				8443DB2928133E0800E9CC39 /* Protocols */,
+				8467EB4628187C59003B0144 /* Views */,
+				84605D992813026C00EC31A7 /* OnboardingRouter.swift */,
 				84605D9C281304DA00EC31A7 /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8467EB4428187C50003B0144 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				8467EB4B28187D64003B0144 /* Protocols */,
+				8467EB4528187C57003B0144 /* Views */,
+				84605D822812E86700EC31A7 /* SignUpRouter.swift */,
 				84605D802812E84100EC31A7 /* SignUpViewModel.swift */,
+				84605D762812BE8C00EC31A7 /* SignInRouter.swift */,
 				84605D782812DA6F00EC31A7 /* SignInViewModel.swift */,
 			);
-			path = ViewModels;
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		8467EB4528187C57003B0144 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8443DB2B28133F7600E9CC39 /* Flows */,
+				842A8F52281185DB008B358E /* Forms */,
+				842A8F532811860A008B358E /* Fields */,
+				842A8F5728118DA6008B358E /* Pictograms */,
+				84CC08AC27F0906700BD05BA /* AuthorizationView.swift */,
+				84364F4B2811E9C00056F1B5 /* OperationDescription.swift */,
+				842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */,
+				842E89E427F2501E005ABDCB /* AuthFormSheet.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8467EB4628187C59003B0144 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84E3929627EA844200BE0436 /* Transitions */,
+				84C1F54527E7E2DD00539E1A /* CustomViews */,
+				84F363582715EA9100127899 /* OnboardingView.swift */,
+				84E3929927EA84A700BE0436 /* TabCell.swift */,
+				84E3929F27EA86B700BE0436 /* ConditionalButtonStack.swift */,
+				84E3929D27EA863500BE0436 /* NavigationButtonStack.swift */,
+				84E3929B27EA84CC00BE0436 /* AuthButtonStack.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8467EB4728187CA2003B0144 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				842E89F527F34782005ABDCB /* Header.swift */,
+				842E89E827F250A1005ABDCB /* DataField.swift */,
+				842E89E627F2503C005ABDCB /* SecureLookUpField.swift */,
+				84988A7F280B6A7D00E902E6 /* PhoneNumberField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8467EB4B28187D64003B0144 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84605D932812FD6800EC31A7 /* SignUpFormViewModelProtocol.swift */,
+				84605D8C2812EE7900EC31A7 /* SignInFormViewModelProtocol.swift */,
+				84605D8E2812EE9700EC31A7 /* ResetPasswordPhoneFormViewModelProtocol.swift */,
+				84605D902812EEA900EC31A7 /* ResetPasswordNewPasswordFormViewModelProtocol.swift */,
+				84605D962812FE6E00EC31A7 /* MFACodeFormViewModelProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		846E074827F20FF900BC06A7 /* Modifiers */ = {
@@ -408,10 +449,9 @@
 			children = (
 				8439959027174DE100BC1CCE /* Info.plist */,
 				849029E62715E50C009152CA /* RenteeApp.swift */,
-				84601BF827B8456A00BC9638 /* Model */,
-				84605D712812BBC800EC31A7 /* ViewModels */,
-				84605D6E2812B67800EC31A7 /* Routers */,
-				84F363562715E5D100127899 /* Views */,
+				84E3929427EA83FE00BE0436 /* Shared */,
+				84601BF827B8456A00BC9638 /* Models */,
+				8467EB4228187C46003B0144 /* Modules */,
 				8439959127174F8D00BC1CCE /* Extensions */,
 				84F3635A271745D100127899 /* Resources */,
 			);
@@ -422,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				84988A82280B6ADB00E902E6 /* RoundedCornersRectangle.swift */,
+				84C1F54327E7E10900539E1A /* UpDownWave.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -434,14 +475,6 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		84C1F54227E7E0F000539E1A /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				84C1F54327E7E10900539E1A /* UpDownWave.swift */,
-			);
-			path = Shapes;
-			sourceTree = "<group>";
-		};
 		84C1F54527E7E2DD00539E1A /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,50 +483,18 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		84CC08A927F0904F00BD05BA /* AuthorizationView */ = {
-			isa = PBXGroup;
-			children = (
-				8443DB2B28133F7600E9CC39 /* Flows */,
-				842A8F52281185DB008B358E /* Forms */,
-				842A8F532811860A008B358E /* Fields */,
-				842A8F5728118DA6008B358E /* Pictograms */,
-				84CC08AC27F0906700BD05BA /* AuthorizationView.swift */,
-				84364F4B2811E9C00056F1B5 /* OperationDescription.swift */,
-				842E89E227F24FF1005ABDCB /* AuthViewBackground.swift */,
-				842E89E427F2501E005ABDCB /* AuthFormSheet.swift */,
-			);
-			path = AuthorizationView;
-			sourceTree = "<group>";
-		};
 		84E3929427EA83FE00BE0436 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				84FFA4F9281C4BEC0076373A /* Protocols */,
 				84364F4D2811F18C0056F1B5 /* Environments */,
 				84988A86280C2B8900E902E6 /* Enums */,
 				84988A81280B6AC700E902E6 /* Shapes */,
 				846E074827F20FF900BC06A7 /* Modifiers */,
 				8429024927E2064800A6B53D /* Styles */,
-				842E89F527F34782005ABDCB /* Header.swift */,
-				842E89E827F250A1005ABDCB /* DataField.swift */,
-				842E89E627F2503C005ABDCB /* SecureLookUpField.swift */,
-				84988A7F280B6A7D00E902E6 /* PhoneNumberField.swift */,
+				8467EB4728187CA2003B0144 /* Views */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		84E3929527EA841E00BE0436 /* OnboardingView */ = {
-			isa = PBXGroup;
-			children = (
-				84E3929627EA844200BE0436 /* Transitions */,
-				84C1F54227E7E0F000539E1A /* Shapes */,
-				84C1F54527E7E2DD00539E1A /* CustomViews */,
-				84F363582715EA9100127899 /* OnboardingView.swift */,
-				84E3929927EA84A700BE0436 /* TabCell.swift */,
-				84E3929F27EA86B700BE0436 /* ConditionalButtonStack.swift */,
-				84E3929D27EA863500BE0436 /* NavigationButtonStack.swift */,
-				84E3929B27EA84CC00BE0436 /* AuthButtonStack.swift */,
-			);
-			path = OnboardingView;
 			sourceTree = "<group>";
 		};
 		84E3929627EA844200BE0436 /* Transitions */ = {
@@ -502,17 +503,6 @@
 				84E3929727EA845500BE0436 /* BackgroundSlide.swift */,
 			);
 			path = Transitions;
-			sourceTree = "<group>";
-		};
-		84F363562715E5D100127899 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				84605D742812BE0000EC31A7 /* ViewProtocol.swift */,
-				84E3929427EA83FE00BE0436 /* Shared */,
-				84E3929527EA841E00BE0436 /* OnboardingView */,
-				84CC08A927F0904F00BD05BA /* AuthorizationView */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		84F363572715E5E600127899 /* Assets */ = {
@@ -543,6 +533,16 @@
 				8451EC0B27E8166B00D8A2DE /* PTSerif */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		84FFA4F9281C4BEC0076373A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84605D722812BC0B00EC31A7 /* ViewModelProtocol.swift */,
+				84605D6F2812B69300EC31A7 /* RouterProtocol.swift */,
+				84605D742812BE0000EC31A7 /* ViewProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
