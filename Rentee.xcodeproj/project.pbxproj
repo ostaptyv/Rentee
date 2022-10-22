@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840C4FB5287753820084F7FC /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C4FB4287753820084F7FC /* SegmentedControl.swift */; };
 		8429026527E3561B00A6B53D /* ActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429026427E3561B00A6B53D /* ActionButtonStyle.swift */; };
 		842A8F4F28106A19008B358E /* String+localizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F4E28106A19008B358E /* String+localizedError.swift */; };
 		842A8F512810765D008B358E /* RNTCodeMFAFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A8F502810765D008B358E /* RNTCodeMFAFieldDelegate.swift */; };
@@ -23,6 +24,7 @@
 		842E89F427F25820005ABDCB /* SignInProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89F327F25820005ABDCB /* SignInProposal.swift */; };
 		842E89F627F34782005ABDCB /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89F527F34782005ABDCB /* Header.swift */; };
 		842E89F927F35A0C005ABDCB /* ErrorMessageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E89F827F35A0C005ABDCB /* ErrorMessageModifier.swift */; };
+		843556EE287568EF0008264C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843556ED287568EF0008264C /* HomeView.swift */; };
 		84364F4A2811E7490056F1B5 /* ResetPasswordPhoneForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84364F492811E7490056F1B5 /* ResetPasswordPhoneForm.swift */; };
 		84364F4C2811E9C00056F1B5 /* OperationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84364F4B2811E9C00056F1B5 /* OperationDescription.swift */; };
 		8439959327174F9B00BC1CCE /* Color+HexInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439959227174F9B00BC1CCE /* Color+HexInit.swift */; };
@@ -83,6 +85,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840C4FB4287753820084F7FC /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		8429026427E3561B00A6B53D /* ActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyle.swift; sourceTree = "<group>"; };
 		842A8F4E28106A19008B358E /* String+localizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localizedError.swift"; sourceTree = "<group>"; };
 		842A8F502810765D008B358E /* RNTCodeMFAFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNTCodeMFAFieldDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 		842E89F327F25820005ABDCB /* SignInProposal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProposal.swift; sourceTree = "<group>"; };
 		842E89F527F34782005ABDCB /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		842E89F827F35A0C005ABDCB /* ErrorMessageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageModifier.swift; sourceTree = "<group>"; };
+		843556ED287568EF0008264C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		84364F492811E7490056F1B5 /* ResetPasswordPhoneForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPhoneForm.swift; sourceTree = "<group>"; };
 		84364F4B2811E9C00056F1B5 /* OperationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDescription.swift; sourceTree = "<group>"; };
 		8439959027174DE100BC1CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,6 +245,14 @@
 			path = Pictograms;
 			sourceTree = "<group>";
 		};
+		843556EC287568D10008264C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				843556ED287568EF0008264C /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		84364F4D2811F18C0056F1B5 /* Environments */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +349,7 @@
 			children = (
 				8467EB4328187C4B003B0144 /* Onboarding */,
 				8467EB4428187C50003B0144 /* Authorization */,
+				84FFA4FA281C4EA40076373A /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -400,6 +413,7 @@
 				842E89E827F250A1005ABDCB /* DataField.swift */,
 				842E89E627F2503C005ABDCB /* SecureLookUpField.swift */,
 				84988A7F280B6A7D00E902E6 /* PhoneNumberField.swift */,
+				840C4FB4287753820084F7FC /* SegmentedControl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -543,6 +557,14 @@
 				84605D742812BE0000EC31A7 /* ViewProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84FFA4FA281C4EA40076373A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				843556EC287568D10008264C /* Views */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -713,6 +735,7 @@
 				84605D752812BE0000EC31A7 /* ViewProtocol.swift in Sources */,
 				84F363592715EA9100127899 /* OnboardingView.swift in Sources */,
 				84605D892812E9D200EC31A7 /* SignInView.swift in Sources */,
+				843556EE287568EF0008264C /* HomeView.swift in Sources */,
 				842E89F627F34782005ABDCB /* Header.swift in Sources */,
 				842A8F5B2811D4C3008B358E /* SignUpProposal.swift in Sources */,
 				8451EC0D27E8180A00D8A2DE /* RswiftSwiftUICompatibility.swift in Sources */,
@@ -720,6 +743,7 @@
 				84601BFB27B8458A00BC9638 /* OnboardingCardEntity.swift in Sources */,
 				842E89E527F2501E005ABDCB /* AuthFormSheet.swift in Sources */,
 				84FB9B6F280F2BD900B95697 /* RNTCodeMFAField.swift in Sources */,
+				840C4FB5287753820084F7FC /* SegmentedControl.swift in Sources */,
 				84898E03280E188900187A9E /* ShieldPictogram.swift in Sources */,
 				84605D772812BE8C00EC31A7 /* SignInRouter.swift in Sources */,
 				8429026527E3561B00A6B53D /* ActionButtonStyle.swift in Sources */,
